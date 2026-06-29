@@ -40,7 +40,7 @@ export function Hero() {
                 ✦
               </span>{" "}
               <span>
-                <b className={styles.proofStrong}>15+ years</b> in classrooms and on courts — now in your corner
+                <b className={styles.proofStrong}>15 years</b> in classrooms and on courts — now in your corner
               </span>
             </div>
           </div>
@@ -58,7 +58,7 @@ export function Hero() {
               <div className={styles.chipIcon}>✦</div>
               <div>
                 <div className={styles.chipBig}>15 yrs</div>
-                <div className={styles.chipSmall}>as an educator</div>
+                <div className={styles.chipSmall}>educator &amp; coach</div>
               </div>
             </HeroChip>
             <HeroChip className={styles.chipBR}>
@@ -71,9 +71,9 @@ export function Hero() {
           </div>
         </div>
         <div className={styles.stats}>
-          <StatBlock tone="dark" value="15" unit="yrs" label="as an educator" />
-          <StatBlock tone="dark" value="15" unit="yrs" label="coaching basketball & golf" />
+          <StatBlock tone="dark" value="15" unit="yrs" label="as an educator & coach" />
           <StatBlock tone="dark" value="1,000s" label="students & athletes guided" />
+          <StatBlock tone="dark" value="2" label="sports coached — hoops & golf" />
         </div>
       </div>
     </section>

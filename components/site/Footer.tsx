@@ -61,7 +61,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className={`bw-container ${styles.copy}`}>© 2026 Ben Walther · Educator &amp; coach · 15+ years in classrooms and on the court</div>
+      <div className={`bw-container ${styles.copy}`}>© 2026 Ben Walther · Educator &amp; coach for 15 years</div>
     </footer>
   );
 }

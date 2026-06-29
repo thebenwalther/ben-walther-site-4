@@ -4,8 +4,8 @@ import headshot from "@/public/images/ben-headshot.jpg";
 import styles from "./MeetBen.module.css";
 
 const creds = [
-  "15 years as an educator",
-  "15 years coaching basketball & golf",
+  "Educator & coach for 15 years",
+  "Coached basketball & golf",
   "Countless students & athletes guided",
   "Focused on the inner game, not just the outer",
 ];
@@ -13,7 +13,7 @@ const creds = [
 /**
  * "Meet Ben" — homepage about section. Builds personal trust between
  * the framework and the programs. Story and credentials here are real
- * (15 yrs educator, 15 yrs basketball/golf coach); positioning line is
+ * (educator & basketball/golf coach for 15 years); positioning line is
  * still open and can be refined.
  */
 export function MeetBen() {
