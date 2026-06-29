@@ -3,12 +3,7 @@ import { Button, Kicker } from "@/components/ui";
 import headshot from "@/public/images/ben-headshot.jpg";
 import styles from "./MeetBen.module.css";
 
-const creds = [
-  "Educator & coach for 15 years",
-  "Coached basketball & golf",
-  "Countless students & athletes guided",
-  "Focused on the inner game, not just the outer",
-];
+const creds = ["Educator & coach for 15 years", "Focused on the inner game, not just the outer"];
 
 /**
  * "Meet Ben" — homepage about section. Builds personal trust between
