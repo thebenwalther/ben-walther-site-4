@@ -1,0 +1,25 @@
+.wrap {
+  text-align: left;
+  margin-bottom: 50px;
+  max-width: 32ch;
+}
+.center {
+  text-align: center;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-h2);
+  letter-spacing: var(--ls-display);
+  line-height: 1.04;
+  margin: 16px 0 0;
+}
+.light {
+  color: var(--text-strong);
+}
+.dark {
+  color: var(--text-on-dark);
+}

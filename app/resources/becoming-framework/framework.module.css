@@ -1,0 +1,136 @@
+.section {
+  padding: 76px 0 60px;
+}
+.intro {
+  max-width: 64ch;
+  margin: 0 auto 72px;
+}
+.introBody {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-lg);
+  line-height: 1.65;
+  color: var(--text-body);
+  margin: 0 0 20px;
+}
+.stage {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+.stageLeft {
+  position: sticky;
+  top: 110px;
+}
+.stageNum {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 88px;
+  line-height: 1;
+  color: var(--accent);
+}
+.stageName {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-h2);
+  letter-spacing: -0.025em;
+  color: var(--text-strong);
+  margin: 12px 0 0;
+}
+.stageStage {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 14px;
+}
+.stageSummary {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--text-strong);
+  margin: 0 0 22px;
+}
+.stageDetail {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-lg);
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0 0 28px;
+}
+.practice {
+  background: var(--surface-raised);
+  border-radius: var(--radius-lg);
+  padding: 26px 28px;
+}
+.practiceLabel {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.practiceText {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--text-body);
+  margin: 0;
+}
+.cta {
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+  position: relative;
+  overflow: hidden;
+}
+.ctaGlow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(70% 80% at 50% 120%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 60%);
+}
+.ctaInner {
+  position: relative;
+  z-index: 2;
+  padding: 96px 0;
+  text-align: center;
+}
+.ctaTitle {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: 44px;
+  letter-spacing: -0.03em;
+  line-height: 1.06;
+  max-width: 20ch;
+  margin: 18px auto 18px;
+}
+.ctaLead {
+  font-family: var(--font-sans);
+  font-size: var(--fs-lead);
+  color: var(--text-on-dark-muted);
+  margin: 0 auto 32px;
+  max-width: 50ch;
+}
+
+@media (max-width: 980px) {
+  .stage {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .stageLeft {
+    position: static;
+  }
+  .stageNum {
+    font-size: 64px;
+  }
+}

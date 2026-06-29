@@ -1,0 +1,60 @@
+.section {
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+  position: relative;
+  overflow: hidden;
+}
+.glow {
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in oklab, var(--accent) 26%, transparent), transparent 60%);
+  pointer-events: none;
+}
+.inner {
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.title {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: 66px;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  max-width: 20ch;
+  margin: 24px auto 18px;
+}
+.accentWord {
+  color: var(--accent);
+}
+.lead {
+  font-family: var(--font-sans);
+  font-size: 19px;
+  color: var(--text-on-dark-muted);
+  margin-bottom: 36px;
+}
+.ctaRow {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.note {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-on-dark-muted);
+  margin-top: 22px;
+}
+
+@media (max-width: 980px) {
+  .title {
+    font-size: 44px;
+  }
+}

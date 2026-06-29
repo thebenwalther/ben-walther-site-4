@@ -1,0 +1,35 @@
+.value {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.unit {
+  color: var(--accent);
+}
+.label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  margin-top: 8px;
+}
+.light .value {
+  color: var(--text-strong);
+}
+.light .label {
+  color: var(--text-muted);
+}
+.dark .value {
+  color: var(--text-on-dark);
+}
+.dark .label {
+  color: var(--text-on-dark-muted);
+}
+.sm .value {
+  font-size: 30px;
+}
+.md .value {
+  font-size: 40px;
+}
+.lg .value {
+  font-size: 64px;
+}

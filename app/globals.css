@@ -1,0 +1,186 @@
+/* ============================================================
+   Ben Walther — design tokens
+   Canonical brand palette: Forest & Gold. Ported from the
+   Claude Design export (project/tokens/*.css, project/base.css).
+   Font custom properties are wired to next/font variables in
+   layout.tsx (see --font-hanken / --font-instrument below).
+   ============================================================ */
+
+:root {
+  /* --- base ramp --- */
+  --bw-paper: #f3eee4; /* warm cream — default page surface */
+  --bw-paper-2: #ece3d4; /* deeper cream — inset panels, cards */
+  --bw-forest: #1c3a2e; /* brand green — dark surfaces, ink on light */
+  --bw-forest-deep: #14291f; /* deepest green — hero / footer base */
+  --bw-gold: #c6a664; /* brand gold — primary accent */
+  --bw-gold-soft: #dcc592; /* soft gold — accents on dark */
+  --bw-ink: #23231e; /* near-black warm — body text on light */
+  --bw-muted: #6e6a5e; /* muted warm grey — secondary text */
+  --bw-cream-on-dark: #f3eee4; /* text on dark surfaces */
+
+  /* --- white & hairlines --- */
+  --bw-white: #fbf8f2;
+  --bw-line: color-mix(in oklab, var(--bw-ink) 12%, transparent);
+  --bw-line-on-dark: color-mix(in oklab, var(--bw-cream-on-dark) 14%, transparent);
+
+  /* ============ semantic aliases ============ */
+  --surface-page: var(--bw-paper);
+  --surface-raised: var(--bw-paper-2);
+  --surface-card: var(--bw-paper);
+  --surface-dark: var(--bw-forest-deep);
+  --surface-dark-soft: var(--bw-forest);
+
+  --text-strong: var(--bw-forest);
+  --text-body: var(--bw-ink);
+  --text-muted: var(--bw-muted);
+  --text-on-dark: var(--bw-cream-on-dark);
+  --text-on-dark-muted: rgba(243, 238, 228, 0.72);
+  --text-accent: var(--bw-gold);
+
+  --accent: var(--bw-gold);
+  --accent-soft: var(--bw-gold-soft);
+  --accent-ink: var(--bw-forest-deep);
+
+  --border-subtle: var(--bw-line);
+  --border-on-dark: var(--bw-line-on-dark);
+
+  --positive: #4f7a52;
+  --warning: #c98a2e;
+  --critical: #b24a38;
+
+  /* ============ type ============ */
+  --font-sans: var(--font-hanken), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-instrument), Georgia, "Times New Roman", serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --fs-display: 78px;
+  --fs-h1: 56px;
+  --fs-h2: 44px;
+  --fs-h3: 26px;
+  --fs-h4: 20px;
+  --fs-lead: 20px;
+  --fs-body-lg: 18px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-kicker: 12.5px;
+
+  --lh-tight: 0.97;
+  --lh-snug: 1.06;
+  --lh-heading: 1.12;
+  --lh-body: 1.55;
+
+  --ls-display: -0.035em;
+  --ls-heading: -0.02em;
+  --ls-kicker: 0.18em;
+  --ls-body: 0em;
+
+  /* ============ spacing / radius / shadow / layout ============ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-30: 120px;
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 28px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 8px 20px -12px rgba(30, 28, 20, 0.3);
+  --shadow-md: 0 16px 34px -16px rgba(30, 28, 20, 0.34);
+  --shadow-lg: 0 18px 44px -18px rgba(30, 28, 20, 0.4);
+  --shadow-accent: 0 12px 26px -10px color-mix(in oklab, var(--accent) 65%, transparent);
+
+  --container: 1240px;
+  --container-tight: 1100px;
+  --gutter: 56px;
+  --nav-height: 76px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.14s;
+  --dur-base: 0.2s;
+}
+
+/* ============ base layer ============ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--surface-page);
+  color: var(--text-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* editorial serif accent — wrap a single phrase, ordinal, or quote */
+.bw-em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  letter-spacing: -0.01em;
+}
+
+/* uppercase eyebrow / kicker */
+.bw-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: var(--fs-kicker);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-kicker);
+  text-transform: uppercase;
+  color: var(--text-accent);
+}
+
+/* layout container */
+.bw-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+.bw-container--tight {
+  max-width: var(--container-tight);
+}
+
+/* gold star rating glyphs */
+.bw-stars {
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+a {
+  color: inherit;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --gutter: 24px;
+  }
+}
+
+

@@ -1,0 +1,50 @@
+.card {
+  border-radius: var(--radius-xl);
+  padding: 34px 30px;
+}
+.light {
+  background: var(--bw-white);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-subtle);
+}
+.dark {
+  background: color-mix(in oklab, var(--text-on-dark) 6%, var(--surface-dark));
+  border: 1px solid var(--border-on-dark);
+}
+.icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: color-mix(in oklab, var(--accent) 16%, var(--bw-white));
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: var(--fw-black);
+  margin-bottom: 22px;
+}
+.title {
+  margin: 0 0 10px;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-h4);
+}
+.light .title {
+  color: var(--text-strong);
+}
+.dark .title {
+  color: var(--text-on-dark);
+}
+.body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+}
+.light .body {
+  color: var(--text-muted);
+}
+.dark .body {
+  color: var(--text-on-dark-muted);
+}

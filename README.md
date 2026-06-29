@@ -1,25 +1,86 @@
-# CODING AGENTS: READ THIS FIRST
+# Ben Walther — Coaching Website
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+A production site for **Ben Walther**, a life & personal-growth coach, built in
+Next.js + TypeScript from the Claude Design export in [`project/`](./project).
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+The brand direction is **"Momentum"** (Direction D from the design exploration):
+confident display type and proof, kept warm and premium through the
+**Forest & Gold** palette so it reads as a trustworthy coach rather than a
+hype-driven funnel.
 
-## What you should do — IMPORTANT
+## Primary call-to-action
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+The brief asked for the main CTA **not** to be "book a one-on-one call." Instead,
+the site funnels people into the free **[Clarity Assessment](#tools--resources)** —
+a low-friction, high-value interactive tool. It earns trust before asking for a
+conversation, it works for people who aren't ready to talk yet, and its result
+routes each person to the right next resource. Booking a call is kept everywhere
+as a **secondary** option (the `BookingCta` / `BookingModal`).
 
-**Find the primary design file under `project/` and read it top to bottom.** The chat transcripts will tell you which file the user was last iterating on. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+## Tools & resources
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+The `/resources` hub is the heart of the site — a genuine toolkit, not teaser
+pages. Everything is real and usable with no backend:
 
-## About the design files
+| Resource | Type | What it does |
+| --- | --- | --- |
+| **The Clarity Assessment** | Tool | 12-question quiz scored entirely client-side across three dimensions (clarity, momentum, self-trust). Gives a personalized banded result and recommends the right next resource. `/resources/clarity-assessment` |
+| **The Becoming Framework** | Framework | Full deep-dive on the 3-stage method (Get Clear → Get Unstuck → Get Moving), each with a practice you can run on yourself. `/resources/becoming-framework` |
+| **The 5-Day Reset** | Course | Free email course with a day-by-day breakdown and signup. `/resources/reset-email-course` |
+| **Values Compass / Stuck-Loop Map / Hard-Conversation Script** | Guides | Three worksheet/template guides with real step-by-step content + email-gated PDF download. `/resources/guides/[slug]` |
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+Email capture (`EmailGate`) and call booking (`BookingModal`) are
+**frontend-only stubs** — they show a confirmation state. Wire them to a real
+email provider / scheduler when one is chosen (see the `onSubmit` handlers).
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+## Getting started
 
-## Bundle contents
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build (all routes prerender statically)
+npm run lint
+```
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Big Papi` project files (HTML prototypes, assets, components)
+## Project structure
+
+```
+app/                       Next.js App Router
+  layout.tsx               next/font (Hanken Grotesk + Instrument Serif), metadata
+  globals.css              design tokens (ported from project/tokens/*) + base layer
+  page.tsx                 homepage (Direction D)
+  icon.svg                 favicon (the "Spark" badge)
+  resources/
+    layout.tsx             shared Nav + Footer for the resources section
+    page.tsx               resources hub
+    clarity-assessment/    the assessment tool
+    becoming-framework/    framework deep-dive
+    reset-email-course/    5-day email course
+    guides/[slug]/         dynamic guide pages (SSG via generateStaticParams)
+components/
+  ui/                      design-system primitives ported to typed React +
+                           CSS Modules (Button, Kicker, StatBlock, FeatureCard,
+                           Testimonial, ProgramCard, Card)
+  site/                    page sections (Hero, Programs, Podcast, Footer, …)
+                           + EmailGate, BookingModal/BookingCta, PageHeader
+  assessment/              ClarityAssessment quiz + result view
+lib/data/                  content as typed data (programs, testimonials,
+                           episodes, resources, assessment, guides, course, framework)
+public/                    optimized assets (headshot, logo SVGs)
+```
+
+## Design source
+
+The original Claude Design handoff bundle lives in [`project/`](./project) and
+the conversation that produced it in [`chats/`](./chats). `project/readme.md` is
+the full design-system guide (voice, visual foundations, tokens, components).
+This app recreates Direction D pixel-for-pixel from those files; the design
+export is kept in-repo for reference and is excluded from linting/build.
+
+### Notes & follow-ups
+
+- **Placeholder content** — coaching prices, testimonials, podcast episodes,
+  "as featured in" outlets, and the resource copy are realistic placeholders from
+  the design brief. Swap in real details in `lib/data/`.
+- **Fonts** are served via `next/font/google` (self-hosted at build time).
+- **No backend yet** — email/booking forms are UI stubs, as noted above.

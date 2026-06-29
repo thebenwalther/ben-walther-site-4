@@ -1,0 +1,28 @@
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-kicker);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-kicker);
+}
+.plain {
+  color: var(--accent);
+}
+.onDark {
+  color: var(--accent-soft);
+}
+.pill {
+  color: var(--accent);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  background: color-mix(in oklab, var(--accent) 14%, var(--bw-white));
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+}
+.spark {
+  color: var(--accent);
+}

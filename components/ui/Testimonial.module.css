@@ -1,0 +1,73 @@
+.card {
+  margin: 0;
+  border-radius: var(--radius-xl);
+  padding: 30px 28px;
+}
+.light {
+  background: var(--bw-white);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-subtle);
+}
+.dark {
+  background: color-mix(in oklab, var(--text-on-dark) 6%, var(--surface-dark));
+  border: 1px solid var(--border-on-dark);
+}
+.stars {
+  color: var(--accent);
+  letter-spacing: 2px;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.quote {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-lg);
+  line-height: 1.55;
+}
+.light .quote {
+  color: var(--text-body);
+}
+.dark .quote {
+  color: var(--text-on-dark);
+}
+.caption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--bw-forest-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.name {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 15px;
+}
+.light .name {
+  color: var(--text-strong);
+}
+.dark .name {
+  color: var(--text-on-dark);
+}
+.role {
+  font-family: var(--font-sans);
+  font-size: 13px;
+}
+.light .role {
+  color: var(--text-muted);
+}
+.dark .role {
+  color: var(--text-on-dark-muted);
+}

@@ -1,0 +1,139 @@
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.progressRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.progressLabel {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.progressCount {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.track {
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in oklab, var(--text-strong) 10%, transparent);
+  overflow: hidden;
+  margin-bottom: 44px;
+}
+.fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--radius-pill);
+  transition: width var(--dur-base) var(--ease-out);
+}
+.card {
+  background: var(--bw-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  padding: 48px 44px;
+  box-shadow: var(--shadow-md);
+}
+.dimTag {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.question {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  color: var(--text-strong);
+  margin: 0 0 36px;
+}
+.scale {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-body);
+  background: var(--surface-page);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  cursor: pointer;
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    background var(--dur-base) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+.option:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.optionSelected {
+  border-color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 12%, var(--bw-white));
+}
+.dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border-subtle);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.optionSelected .dot {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+.dotInner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-ink);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+.back {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 4px;
+}
+.back:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.hint {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-muted);
+}

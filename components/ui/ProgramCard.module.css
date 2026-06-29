@@ -1,0 +1,80 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-2xl);
+  padding: 36px 32px;
+}
+.standard {
+  background: var(--bw-white);
+  color: var(--text-body);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+.featured {
+  background: var(--surface-dark-soft);
+  color: var(--text-on-dark);
+  border: 1.5px solid var(--surface-dark-soft);
+  box-shadow: var(--shadow-lg);
+}
+.badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+.tag {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.name {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-h3);
+  letter-spacing: -0.01em;
+}
+.standard .name {
+  color: var(--text-strong);
+}
+.featured .name {
+  color: var(--text-on-dark);
+}
+.price {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  margin: 8px 0 18px;
+}
+.standard .price {
+  color: var(--text-muted);
+}
+.featured .price {
+  color: var(--text-on-dark-muted);
+}
+.description {
+  margin: 0 0 24px;
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+}
+.standard .description {
+  color: var(--text-muted);
+}
+.featured .description {
+  color: var(--text-on-dark-muted);
+}

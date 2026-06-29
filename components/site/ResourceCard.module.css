@@ -1,0 +1,103 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bw-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 34px 30px;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: var(--text-body);
+  transition:
+    transform var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out);
+  height: 100%;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+.featured {
+  background: var(--surface-dark-soft);
+  color: var(--text-on-dark);
+  border-color: var(--surface-dark-soft);
+  box-shadow: var(--shadow-lg);
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: color-mix(in oklab, var(--accent) 16%, var(--bw-white));
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: var(--fw-black);
+}
+.featured .icon {
+  background: color-mix(in oklab, var(--accent) 22%, transparent);
+}
+.kind {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.title {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-h3);
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+}
+.featured .title {
+  color: var(--text-on-dark);
+}
+.standard .title {
+  color: var(--text-strong);
+}
+.blurb {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  margin: 0 0 22px;
+  flex: 1;
+}
+.standard .blurb {
+  color: var(--text-muted);
+}
+.featured .blurb {
+  color: var(--text-on-dark-muted);
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.meta {
+  font-family: var(--font-sans);
+  font-size: 13px;
+}
+.standard .meta {
+  color: var(--text-muted);
+}
+.featured .meta {
+  color: var(--text-on-dark-muted);
+}
+.go {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--accent);
+  white-space: nowrap;
+}
