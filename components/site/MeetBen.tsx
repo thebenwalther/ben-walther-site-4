@@ -4,16 +4,17 @@ import headshot from "@/public/images/ben-headshot.jpg";
 import styles from "./MeetBen.module.css";
 
 const creds = [
-  "Certified ICF Coach (PCC)",
-  "12 years in practice",
-  "400+ clients coached",
-  "Host of The Becoming Podcast",
+  "15 years as an educator",
+  "15 years coaching basketball & golf",
+  "Countless students & athletes guided",
+  "Focused on the inner game, not just the outer",
 ];
 
 /**
  * "Meet Ben" — homepage about section. Builds personal trust between
- * the framework and the programs. Copy here is placeholder in Ben's
- * voice; swap for his real story, credentials, and positioning.
+ * the framework and the programs. Story and credentials here are real
+ * (15 yrs educator, 15 yrs basketball/golf coach); positioning line is
+ * still open and can be refined.
  */
 export function MeetBen() {
   return (
@@ -39,22 +40,26 @@ export function MeetBen() {
           <div>
             <Kicker spark>Meet Ben</Kicker>
             <h2 className={styles.title}>
-              I help people stop performing their life <span className="bw-em">and start living it.</span>
+              For years, I played smaller than <span className="bw-em">I knew I could be.</span>
             </h2>
             <div className={styles.body}>
               <p>
-                A decade ago I had the title, the salary, the life that looked right on paper — and a quiet,
-                stubborn sense that I was living someone else&apos;s answer to my own question. It took a hard
-                year and one very honest coach to show me the gap between the two. Closing it changed everything.
+                I backed away from anything that risked real failure, then quietly punished myself for backing
+                away. The drift was slow — until it wasn&apos;t. A relationship I almost lost. A career that kept
+                shrinking. A son on the way, and no solid ground to stand on. Something broke. And in the
+                breaking, I finally started to move.
               </p>
               <p>
-                So I don&apos;t do hype, and I don&apos;t do shame. You don&apos;t need to be fixed — you need
-                someone in your corner who won&apos;t let you talk yourself out of what you already know. Calm,
-                direct, and occasionally annoyingly persistent. That&apos;s the job, and I love it.
+                I knew why I coach the day I saw it in my nephew — making the same trades I&apos;d made. Dodging
+                the assignment he didn&apos;t fully understand, because being called lazy hurt less than being
+                called not smart enough. Choosing the safer wound. I recognized it instantly. And I couldn&apos;t
+                let it go.
               </p>
               <p>
-                For twelve years I&apos;ve worked with founders, leaders, and quietly successful people in the
-                messy middle of a reinvention — the ones who are finally done waiting for permission.
+                Here&apos;s what I&apos;ve come to know about myself: I can see in other people what I spent years
+                unable to see in me. That gap — between how clearly I read others and how blind I was to my own
+                patterns — is exactly what I coach. I know the loop from the inside. And I know what it quietly
+                takes from a life when no one names it.
               </p>
             </div>
 

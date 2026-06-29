@@ -61,7 +61,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className={`bw-container ${styles.copy}`}>© 2026 Ben Walther · Certified ICF Coach</div>
+      <div className={`bw-container ${styles.copy}`}>© 2026 Ben Walther · Educator &amp; coach · 30 years in classrooms and on the court</div>
     </footer>
   );
 }
