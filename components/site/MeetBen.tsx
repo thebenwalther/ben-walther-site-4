@@ -44,22 +44,25 @@ export function MeetBen() {
             </h2>
             <div className={styles.body}>
               <p>
-                I backed away from anything that risked real failure, then quietly punished myself for backing
-                away. The drift was slow — until it wasn&apos;t. A relationship I almost lost. A career that kept
-                shrinking. A son on the way, and no solid ground to stand on. Something broke. And in the
-                breaking, I finally started to move.
+                I backed away from anything that risked real failure, then punished myself for backing away.
+                The drift was quiet. A relationship I almost lost. A career that kept shrinking. A son on the way,
+                and no solid ground to stand on. Then something broke. And in the breaking, I finally started to
+                move.
               </p>
               <p>
-                I knew why I coach the day I saw it in my nephew — making the same trades I&apos;d made. Dodging
-                the assignment he didn&apos;t fully understand, because being called lazy hurt less than being
-                called not smart enough. Choosing the safer wound. I recognized it instantly. And I couldn&apos;t
-                let it go.
+                I knew why I coach the day I saw it in my nephew. He was making the same trades I&apos;d made.
+                Dodging the assignment he didn&apos;t understand, because being called lazy hurt less than being
+                called not smart enough. He was choosing the safer wound. I recognized it instantly, and I
+                couldn&apos;t let it go.
               </p>
               <p>
-                Here&apos;s what I&apos;ve come to know about myself: I can see in other people what I spent years
-                unable to see in me. That gap — between how clearly I read others and how blind I was to my own
-                patterns — is exactly what I coach. I know the loop from the inside. And I know what it quietly
-                takes from a life when no one names it.
+                Here&apos;s the strange thing I&apos;ve learned about myself. I can see in other people what I
+                spent years unable to see in me. That gap, between how clearly I read others and how blind I was
+                to my own patterns, is exactly what I coach. I know the loop from the inside. And I know what it
+                quietly takes from a life when no one names it.
+              </p>
+              <p>
+                If you recognize yourself in any of this, good. That recognition is where the work starts.
               </p>
             </div>
 
