@@ -46,8 +46,8 @@ export function MeetBen() {
               <p>
                 I backed away from anything that risked real failure, then punished myself for backing away.
                 The drift was quiet. A relationship I almost lost. A career that kept shrinking. A son on the way,
-                and no solid ground to stand on. Then something broke. And in the breaking, I finally started to
-                move.
+                and no solid ground to stand on. Then something broke — and in the breaking, I finally started
+                to move.
               </p>
               <p>
                 I knew why I coach the day I saw it in my nephew. He was making the same trades I&apos;d made.
@@ -62,7 +62,7 @@ export function MeetBen() {
                 quietly takes from a life when no one names it.
               </p>
               <p>
-                If you recognize yourself in any of this, good. That recognition is where the work starts.
+                If you recognize yourself in any of this, good — that recognition is where the work starts.
               </p>
             </div>
 
