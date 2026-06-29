@@ -12,9 +12,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Design-export reference material (HTML/JS prototypes from Claude
-    // Design); not part of the Next.js app and intentionally not linted.
-    "project/**",
   ]),
 ]);
 

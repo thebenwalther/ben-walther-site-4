@@ -1,9 +1,8 @@
 /* ============================================================
    Ben Walther — design tokens
-   Canonical brand palette: Forest & Gold. Ported from the
-   Claude Design export (project/tokens/*.css, project/base.css).
-   Font custom properties are wired to next/font variables in
-   layout.tsx (see --font-hanken / --font-instrument below).
+   Canonical brand palette: Forest & Gold, from the Claude Design
+   "Momentum" (Direction D) export. Font custom properties are wired
+   to next/font variables in layout.tsx (--font-hanken / --font-instrument).
    ============================================================ */
 
 :root {

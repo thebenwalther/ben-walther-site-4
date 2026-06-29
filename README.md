@@ -71,11 +71,11 @@ public/                    optimized assets (headshot, logo SVGs)
 
 ## Design source
 
-The original Claude Design handoff bundle lives in [`project/`](./project) and
-the conversation that produced it in [`chats/`](./chats). `project/readme.md` is
-the full design-system guide (voice, visual foundations, tokens, components).
-This app recreates Direction D pixel-for-pixel from those files; the design
-export is kept in-repo for reference and is excluded from linting/build.
+This app recreates **Direction D ("Momentum")** from a Claude Design export.
+The original handoff bundle — HTML prototypes, the full design-system guide
+(voice, visual foundations, tokens, components), and the design conversation —
+is kept outside this repo; the brand tokens it defined are ported into
+`app/globals.css` and the components into `components/ui/`.
 
 ### Notes & follow-ups
 

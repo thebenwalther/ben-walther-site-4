@@ -1,7 +1,0 @@
-/* ============================================================
-   Ben Walther — Webfonts
-   Both families are served from Google Fonts. If you self-host,
-   replace these @import lines with @font-face rules pointing at
-   local files and the compiler will ship those binaries instead.
-   ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..800;1,400..600&family=Instrument+Serif:ital@0;1&display=swap');
