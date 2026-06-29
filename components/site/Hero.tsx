@@ -73,7 +73,6 @@ export function Hero() {
         <div className={styles.stats}>
           <StatBlock tone="dark" value="15" unit="yrs" label="as an educator & coach" />
           <StatBlock tone="dark" value="1,000s" label="students & athletes guided" />
-          <StatBlock tone="dark" value="2" label="sports coached — hoops & golf" />
         </div>
       </div>
     </section>
