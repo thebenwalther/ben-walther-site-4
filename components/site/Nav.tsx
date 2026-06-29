@@ -6,7 +6,7 @@ import { Button } from "@/components/ui";
 import styles from "./Nav.module.css";
 
 const links = [
-  { href: "/#out", label: "Results" },
+  { href: "/#about", label: "About" },
   { href: "/#how", label: "How it works" },
   { href: "/#prog", label: "Programs" },
   { href: "/resources", label: "Resources" },
