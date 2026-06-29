@@ -14,19 +14,19 @@ export function Footer() {
           <div>
             <div className={styles.h4}>Explore</div>
             <Link className={styles.link} href="/#out">
-              Results
+              What changes
             </Link>
             <Link className={styles.link} href="/#how">
               How it works
+            </Link>
+            <Link className={styles.link} href="/#about">
+              About Ben
             </Link>
             <Link className={styles.link} href="/#prog">
               Programs
             </Link>
             <Link className={styles.link} href="/resources">
               Resources
-            </Link>
-            <Link className={styles.link} href="/#pod">
-              Podcast
             </Link>
           </div>
           <div>
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className={`bw-container ${styles.copy}`}>© 2026 Ben Walther · Educator &amp; coach · 30 years in classrooms and on the court</div>
+      <div className={`bw-container ${styles.copy}`}>© 2026 Ben Walther · Educator &amp; coach · 15+ years in classrooms and on the court</div>
     </footer>
   );
 }

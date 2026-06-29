@@ -10,7 +10,6 @@ const links = [
   { href: "/#how", label: "How it works" },
   { href: "/#prog", label: "Programs" },
   { href: "/resources", label: "Resources" },
-  { href: "/#pod", label: "Podcast" },
 ];
 
 /** Sticky translucent site nav, shared across every page. */

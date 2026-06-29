@@ -36,9 +36,11 @@ export function Hero() {
               </BookingCta>
             </div>
             <div className={styles.proofRow}>
-              <span className="bw-stars">★★★★★</span>{" "}
+              <span className="bw-stars" aria-hidden="true">
+                ✦
+              </span>{" "}
               <span>
-                <b className={styles.proofStrong}>4.9</b> average · from 400+ clients coached
+                <b className={styles.proofStrong}>15+ years</b> in classrooms and on courts — now in your corner
               </span>
             </div>
           </div>
@@ -55,21 +57,23 @@ export function Hero() {
             <HeroChip className={styles.chipTL}>
               <div className={styles.chipIcon}>✦</div>
               <div>
-                <div className={styles.chipBig}>12 yrs</div>
-                <div className={styles.chipSmall}>coaching</div>
+                <div className={styles.chipBig}>15 yrs</div>
+                <div className={styles.chipSmall}>as an educator</div>
               </div>
             </HeroChip>
             <HeroChip className={styles.chipBR}>
-              <span className="bw-stars">★★★★★</span>
-              <div className={styles.chipQuote}>&ldquo;Changed my whole year.&rdquo;</div>
+              <div className={styles.chipIcon}>✦</div>
+              <div>
+                <div className={styles.chipBig}>1,000s</div>
+                <div className={styles.chipSmall}>students &amp; athletes</div>
+              </div>
             </HeroChip>
           </div>
         </div>
         <div className={styles.stats}>
-          <StatBlock tone="dark" value="400" unit="+" label="clients coached" />
-          <StatBlock tone="dark" value="1.2" unit="M" label="podcast downloads" />
-          <StatBlock tone="dark" value="12" unit="yrs" label="in practice" />
-          <StatBlock tone="dark" value="94" unit="%" label="renew or refer" />
+          <StatBlock tone="dark" value="15" unit="yrs" label="as an educator" />
+          <StatBlock tone="dark" value="15" unit="yrs" label="coaching basketball & golf" />
+          <StatBlock tone="dark" value="1,000s" label="students & athletes guided" />
         </div>
       </div>
     </section>
