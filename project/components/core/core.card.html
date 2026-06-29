@@ -1,0 +1,87 @@
+<!-- @dsCard group="Components" viewport="700x620" name="Core" subtitle="Button, Kicker, StatBlock, FeatureCard, Testimonial, ProgramCard" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;padding:26px;background:var(--surface-page);}
+  .sec{margin-bottom:26px;}
+  .lab{font-family:var(--font-sans);font-weight:700;font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;}
+  .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+  .darkbox{background:var(--surface-dark);border-radius:var(--radius-lg);padding:20px;}
+</style></head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { Button, Kicker, StatBlock, FeatureCard, Testimonial, ProgramCard } = window.BigPapi_95c869;
+    function Demo(){
+      return (
+        <div>
+          <div className="sec">
+            <div className="lab">Button</div>
+            <div className="row">
+              <Button variant="accent" iconRight="→">Book a call</Button>
+              <Button variant="dark">Secondary</Button>
+              <Button variant="outline">Outline</Button>
+              <Button variant="soft">Soft</Button>
+              <Button variant="accent" size="sm">Small</Button>
+              <Button variant="outline" disabled>Disabled</Button>
+            </div>
+          </div>
+
+          <div className="sec">
+            <div className="lab">Kicker</div>
+            <div className="row">
+              <Kicker spark>Life &amp; Growth Coach</Kicker>
+              <Kicker tone="pill">Hi, I'm Ben 👋</Kicker>
+              <div className="darkbox"><Kicker tone="on-dark">How it works</Kicker></div>
+            </div>
+          </div>
+
+          <div className="sec">
+            <div className="lab">StatBlock</div>
+            <div className="row" style={{gap:48}}>
+              <StatBlock value="400" unit="+" label="clients coached" />
+              <StatBlock value="1.2" unit="M" label="podcast downloads" />
+              <StatBlock value="4.9" unit="★" label="average rating" />
+            </div>
+          </div>
+
+          <div className="sec">
+            <div className="lab">FeatureCard</div>
+            <div className="grid3">
+              <FeatureCard icon="◎" title="You get clear">You finally know what you actually want.</FeatureCard>
+              <FeatureCard icon="↑" title="You get moving">Real steps on the thing you've circled for years.</FeatureCard>
+              <FeatureCard icon="♡" title="You feel steady">Setbacks stop flattening you.</FeatureCard>
+            </div>
+          </div>
+
+          <div className="sec">
+            <div className="lab">Testimonial</div>
+            <div style={{maxWidth:380}}>
+              <Testimonial rating={5} initials="SK" name="Sarah K." role="Product Designer"
+                quote="I came in wanting a new job. I left with a different relationship to my whole life." />
+            </div>
+          </div>
+
+          <div className="sec">
+            <div className="lab">ProgramCard</div>
+            <div className="grid3">
+              <ProgramCard tag="One-off" name="The Reset" price="$295 · 90-min session"
+                description="Cut through the fog and leave with one clear next step." ctaLabel="Book a Reset" />
+              <ProgramCard tag="Three months" name="1:1 Coaching" price="$240 / session, biweekly"
+                description="Six sessions plus weekly accountability to make change stick." badge="Most popular" featured ctaLabel="Apply for 1:1" />
+              <ProgramCard tag="Ongoing" name="Inner Circle" price="$420 / month"
+                description="Monthly coaching plus between-session support." ctaLabel="Enquire" />
+            </div>
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+  </script>
+</body></html>

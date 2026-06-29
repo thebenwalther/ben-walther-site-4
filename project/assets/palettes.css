@@ -1,0 +1,108 @@
+/* ===== Ben Walther — palette options =====
+   Role variables consumed by every direction page.
+   Switch via [data-palette] on <html>. */
+
+:root,
+[data-palette="forest"] {
+  --paper:      #F3EEE4;
+  --paper-2:    #ECE3D4;
+  --deep:       #1C3A2E;  /* brand dark — headlines / dark sections */
+  --deep-2:     #14291F;  /* deepest — dark-section base */
+  --accent:     #C6A664;  /* gold */
+  --accent-2:   #DCC592;  /* soft accent */
+  --ink:        #23231E;
+  --muted:      #6E6A5E;
+  --on-deep:    #F3EEE4;  /* text on dark sections */
+  --on-deep-mut:rgba(243,238,228,.72);
+}
+
+[data-palette="clay"] {
+  --paper:      #F5ECE1;
+  --paper-2:    #EFE2D2;
+  --deep:       #5B2A22;
+  --deep-2:     #44201A;
+  --accent:     #C67A4C;
+  --accent-2:   #E0A878;
+  --ink:        #2E2622;
+  --muted:      #7A6A5E;
+  --on-deep:    #F6ECE0;
+  --on-deep-mut:rgba(246,236,224,.74);
+}
+
+[data-palette="ink"] {
+  --paper:      #F6F3ED;
+  --paper-2:    #EDE8DE;
+  --deep:       #242220;
+  --deep-2:     #16140F;
+  --accent:     #C0973A;
+  --accent-2:   #DCC07A;
+  --ink:        #242220;
+  --muted:      #6F6A60;
+  --on-deep:    #F6F3ED;
+  --on-deep-mut:rgba(246,243,237,.72);
+}
+
+[data-palette="plum"] {
+  --paper:      #F4EEE8;
+  --paper-2:    #ECE2D8;
+  --deep:       #3A2231;
+  --deep-2:     #2A1824;
+  --accent:     #C98A5E;
+  --accent-2:   #E2AE86;
+  --ink:        #2C2228;
+  --muted:      #786A70;
+  --on-deep:    #F4EEE8;
+  --on-deep-mut:rgba(244,238,232,.74);
+}
+
+[data-palette="ember"] {
+  --paper:      #F4F0E9;
+  --paper-2:    #E9E2D6;
+  --deep:       #221E1C;
+  --deep-2:     #161311;
+  --accent:     #DB7A3C;  /* ember */
+  --accent-2:   #EBA46B;
+  --ink:        #221E1C;
+  --muted:      #6F675E;
+  --on-deep:    #F4F0E9;
+  --on-deep-mut:rgba(244,240,233,.74);
+}
+
+[data-palette="coral"] {
+  --paper:      #FFF8F1;
+  --paper-2:    #FCEEE1;
+  --deep:       #2A2521;
+  --deep-2:     #241F1B;
+  --accent:     #FF6A3D;  /* vivid coral */
+  --accent-2:   #FF9A78;
+  --ink:        #2A2521;
+  --muted:      #7C7066;
+  --on-deep:    #FFF8F1;
+  --on-deep-mut:rgba(255,248,241,.76);
+}
+
+[data-palette="sun"] {
+  --paper:      #FFFDF6;
+  --paper-2:    #FBF1D6;
+  --deep:       #232020;
+  --deep-2:     #1A1816;
+  --accent:     #F4B400;  /* sunny amber */
+  --accent-2:   #FBD460;
+  --ink:        #232020;
+  --muted:      #6E685E;
+  --on-deep:    #FFFDF6;
+  --on-deep-mut:rgba(255,253,246,.74);
+}
+
+[data-palette="brass"] {
+  --paper:      #EFEBE2;
+  --paper-2:    #E5DFD2;
+  --deep:       #1E2A36;
+  --deep-2:     #15202B;
+  --accent:     #B8924E;
+  --accent-2:   #D4B173;
+  --ink:        #232A30;
+  --muted:      #67707A;
+  --on-deep:    #EFEBE2;
+  --on-deep-mut:rgba(239,235,226,.74);
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben Walther — Life &amp; Growth Coach (Direction B)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..800;1,400..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/palettes.css">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{--sans:'Hanken Grotesk',system-ui,sans-serif;--serif:'Instrument Serif',Georgia,serif;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);background:var(--deep-2);color:var(--on-deep);
+    -webkit-font-smoothing:antialiased;line-height:1.5;}
+  .em{font-family:var(--serif);font-style:italic;font-weight:400;}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 56px;}
+  a{color:inherit;text-decoration:none;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;
+    padding:16px 28px;border-radius:999px;cursor:pointer;border:none;line-height:1;
+    white-space:nowrap;transition:transform .15s,opacity .15s;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-gold{background:var(--accent);color:var(--deep-2);}
+  .btn-gold:hover{opacity:.92;}
+  .btn-outline{background:transparent;color:var(--on-deep);border:1.5px solid color-mix(in oklab,var(--on-deep) 30%,transparent);}
+  .btn-text{background:transparent;color:var(--on-deep);}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);}
+  .eyebrow .spark{color:var(--accent);font-size:16px;}
+  image-slot{display:block;}
+
+  header{position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--deep-2) 86%,transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+  nav{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .wordmark{font-weight:700;font-size:22px;letter-spacing:-.01em;color:var(--on-deep);}
+  .navlinks{display:flex;gap:30px;align-items:center;}
+  .navlinks a{font-size:15.5px;font-weight:500;color:var(--on-deep);opacity:.72;}
+  .navlinks a:hover{opacity:1;}
+  .nav-cta{border:1.5px solid color-mix(in oklab,var(--on-deep) 30%,transparent);
+    padding:10px 20px;border-radius:999px;opacity:1;}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:64px 0 84px;}
+  .hero::after{content:'';position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(120% 80% at 92% 4%,color-mix(in oklab,var(--accent) 18%,transparent),transparent 55%);}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:center;}
+  .hero h1{font-size:82px;line-height:.97;font-weight:700;letter-spacing:-.03em;margin:30px 0 0;}
+  .hero h1 .em{color:var(--accent);font-size:84px;}
+  .hero .sub{font-size:20px;line-height:1.5;color:var(--on-deep-mut);margin:30px 0 36px;max-width:42ch;}
+  .cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
+  .b .hero .portrait{width:100%;max-width:420px;height:420px;border-radius:50%;border:1px solid color-mix(in oklab,var(--accent-2) 35%,transparent);}
+  .b .hero-grid > div:last-child{display:flex;justify-content:center;}
+  .hero .stat-strip{position:relative;z-index:2;display:flex;gap:48px;margin-top:64px;padding-top:30px;
+    border-top:1px solid color-mix(in oklab,var(--on-deep) 14%,transparent);}
+  .hero .stat .n{font-size:40px;font-weight:700;color:var(--on-deep);line-height:1;}
+  .hero .stat .l{font-size:14px;color:var(--on-deep-mut);margin-top:8px;}
+
+  /* manifesto */
+  .manifesto{padding:110px 0;}
+  .manifesto .eyebrow{margin-bottom:34px;}
+  .manifesto p{font-size:52px;line-height:1.16;font-weight:600;letter-spacing:-.02em;max-width:20ch;}
+  .manifesto p .em{color:var(--accent);}
+  .manifesto .muted{color:color-mix(in oklab,var(--on-deep) 42%,var(--deep-2));}
+
+  /* about — light inset */
+  .about{background:var(--paper);color:var(--ink);}
+  .about .wrap{padding:96px 56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;}
+  .about .eyebrow{color:var(--deep);}
+  .about .eyebrow .spark{color:var(--accent);}
+  .about .photo{width:100%;height:500px;border-radius:20px;}
+  .about h2{font-size:40px;font-weight:700;letter-spacing:-.025em;color:var(--deep);margin:18px 0 22px;line-height:1.06;}
+  .about p{font-size:18px;line-height:1.62;color:var(--ink);margin-bottom:18px;max-width:48ch;}
+  .about .sig{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--deep);}
+
+  /* approach big list */
+  .approach{padding:104px 0;}
+  .approach .head{margin-bottom:54px;}
+  .approach h2{font-size:44px;font-weight:700;letter-spacing:-.025em;margin-top:18px;}
+  .alist{border-top:1px solid color-mix(in oklab,var(--on-deep) 16%,transparent);}
+  .arow{display:grid;grid-template-columns:120px 1fr 1.4fr;gap:30px;padding:36px 0;align-items:baseline;
+    border-bottom:1px solid color-mix(in oklab,var(--on-deep) 16%,transparent);}
+  .arow .n{font-family:var(--serif);font-style:italic;font-size:40px;color:var(--accent);}
+  .arow h3{font-size:28px;font-weight:700;letter-spacing:-.01em;}
+  .arow p{font-size:18px;line-height:1.55;color:var(--on-deep-mut);}
+
+  /* services */
+  .svc{padding:0 0 110px;}
+  .svc .head{margin-bottom:46px;}
+  .svc h2{font-size:44px;font-weight:700;letter-spacing:-.025em;margin-top:18px;}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .scard{background:color-mix(in oklab,var(--on-deep) 6%,var(--deep-2));border-radius:22px;
+    padding:34px 32px;display:flex;flex-direction:column;border:1px solid color-mix(in oklab,var(--on-deep) 10%,transparent);}
+  .scard.feat{background:var(--accent);color:var(--deep-2);border-color:var(--accent);}
+  .scard .tag{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);margin-bottom:18px;}
+  .scard.feat .tag{color:var(--deep-2);opacity:.7;}
+  .scard h3{font-size:27px;font-weight:700;}
+  .scard .price{font-size:15px;color:var(--on-deep-mut);margin:8px 0 18px;}
+  .scard.feat .price{color:color-mix(in oklab,var(--deep-2) 70%,transparent);}
+  .scard p{font-size:16px;line-height:1.55;color:var(--on-deep-mut);margin-bottom:26px;flex:1;}
+  .scard.feat p{color:color-mix(in oklab,var(--deep-2) 78%,transparent);}
+  .scard .go{font-weight:600;font-size:16px;display:inline-flex;gap:7px;align-items:center;}
+
+  /* testimonials */
+  .testi{background:var(--paper);color:var(--ink);}
+  .testi .wrap{padding:100px 56px;}
+  .testi .big{font-family:var(--serif);font-style:italic;font-size:46px;line-height:1.28;color:var(--deep);
+    text-align:center;max-width:24ch;margin:0 auto;}
+  .testi .who{display:block;font-family:var(--sans);font-style:normal;font-size:16px;font-weight:600;
+    color:var(--muted);margin-top:28px;text-align:center;letter-spacing:.01em;}
+
+  /* CTA */
+  .cta{padding:120px 0;text-align:center;position:relative;overflow:hidden;}
+  .cta::after{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:680px;height:680px;
+    border-radius:50%;background:radial-gradient(circle,color-mix(in oklab,var(--accent) 18%,transparent),transparent 62%);pointer-events:none;}
+  .cta h2{position:relative;z-index:2;font-size:64px;font-weight:700;letter-spacing:-.03em;line-height:1.02;max-width:18ch;margin:0 auto;}
+  .cta h2 .em{color:var(--accent);}
+  .cta .btn{position:relative;z-index:2;margin-top:38px;}
+
+  footer{border-top:1px solid color-mix(in oklab,var(--on-deep) 14%,transparent);padding:48px 0 56px;}
+  .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;}
+  .foot .wordmark{font-size:24px;}
+  .foot .tagline{font-size:14px;color:var(--on-deep-mut);margin-top:10px;max-width:30ch;}
+  .foot-links{display:flex;gap:56px;}
+  .foot-col h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-deep-mut);margin-bottom:14px;}
+  .foot-col a{display:block;font-size:15px;margin-bottom:10px;opacity:.78;}
+  .foot-col a:hover{opacity:1;}
+  .copy{margin-top:44px;font-size:13px;color:var(--on-deep-mut);}
+
+  @media(max-width:980px){
+    .hero-grid,.about .wrap,.svc-grid,.arow{grid-template-columns:1fr;}
+    .hero h1{font-size:54px;}.hero h1 .em{font-size:56px;}.manifesto p{font-size:36px;}
+    .arow{gap:8px;}
+  }
+</style>
+</head>
+<body>
+<script src="image-slot.js"></script>
+
+<header>
+  <nav class="wrap">
+    <div class="wordmark">Ben Walther</div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#approach">Approach</a>
+      <a href="#work">Coaching</a>
+      <a href="#" class="nav-cta">Work with me</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow"><span class="spark">✦</span> Life &amp; Personal Growth Coaching</div>
+        <h1>Stop managing your life.<br>Start <span class="em">building it.</span></h1>
+        <p class="sub">Coaching for people ready to close the gap between who they are and who they keep meaning to become.</p>
+        <div class="cta-row">
+          <a href="#" class="btn btn-gold">Start the conversation →</a>
+          <a href="#" class="btn btn-text">Watch the 2-min intro</a>
+        </div>
+      </div>
+      <div><image-slot id="b-hero" class="portrait" shape="circle" src="assets/ben-headshot.jpeg" placeholder="Drop portrait"></image-slot></div>
+    </div>
+    <div class="stat-strip">
+      <div class="stat"><div class="n">12 yrs</div><div class="l">coaching practice</div></div>
+      <div class="stat"><div class="n">400+</div><div class="l">clients guided</div></div>
+      <div class="stat"><div class="n">ICF</div><div class="l">certified coach</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="wrap">
+    <div class="eyebrow"><span class="spark">✦</span> What I believe</div>
+    <p>You're not broken. You're <span class="em">out of practice</span> at listening to yourself. <span class="muted">Everything else we can work with.</span></p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div><image-slot id="b-about" class="photo" shape="rounded" src="assets/ben-headshot.jpeg" placeholder="Drop a candid photo"></image-slot></div>
+    <div>
+      <div class="eyebrow"><span class="spark">✦</span> About Ben</div>
+      <h2>I help people stop performing their lives and start living them.</h2>
+      <p>For twelve years I've sat with founders, leaders, and quiet over-achievers in the messy middle of a reinvention. No scripts, no hustle, no shame — just honest conversations that move you forward.</p>
+      <p>I trained as an ICF coach after my own unravelling taught me willpower isn't the thing in short supply. Clarity is.</p>
+      <div class="sig">Ben Walther</div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span class="spark">✦</span> How I work</div>
+      <h2>Three moves, repeated until it sticks.</h2>
+    </div>
+    <div class="alist">
+      <div class="arow"><div class="n">01</div><h3>Get clear</h3><p>We find what actually matters to you, underneath the noise and the shoulds you inherited.</p></div>
+      <div class="arow"><div class="n">02</div><h3>Get unstuck</h3><p>We name the patterns keeping you in place — and loosen their grip without the drama.</p></div>
+      <div class="arow"><div class="n">03</div><h3>Get moving</h3><p>Small, doable steps that compound into a genuinely different life.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="work">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span class="spark">✦</span> Ways to work together</div>
+      <h2>Start where you are.</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="scard">
+        <div class="tag">One-off</div><h3>The Reset</h3>
+        <div class="price">$295 · single 90-min session</div>
+        <p>A deep, focused session to cut through the fog and leave with a clear next step.</p>
+        <a href="#" class="go">Book a Reset →</a>
+      </div>
+      <div class="scard feat">
+        <div class="tag">Three months</div><h3>1:1 Coaching</h3>
+        <div class="price">$240 / session, every other week</div>
+        <p>Six sessions over three months to make change actually stick. Clarity and accountability.</p>
+        <a href="#" class="go">Apply for 1:1 →</a>
+      </div>
+      <div class="scard">
+        <div class="tag">Ongoing</div><h3>Inner Circle</h3>
+        <div class="price">$420 / month</div>
+        <p>Monthly coaching plus between-session support for people building something big.</p>
+        <a href="#" class="go">Enquire →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testi">
+  <div class="wrap">
+    <div class="big">“I came in wanting a new job. I left with a different relationship to my whole life.”<span class="who">Sarah K. — Product Designer</span></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>The gap won't close <span class="em">by itself.</span></h2>
+    <a href="#" class="btn btn-gold">Book a free intro call →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="wordmark">Ben Walther</div>
+      <div class="tagline">Life &amp; growth coaching for people ready to become themselves.</div>
+    </div>
+    <div class="foot-links">
+      <div class="foot-col"><h4>Explore</h4><a href="#about">About</a><a href="#approach">Approach</a><a href="#work">Coaching</a></div>
+      <div class="foot-col"><h4>Connect</h4><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Newsletter</a></div>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 Ben Walther · Certified ICF Coach</div>
+</footer>
+
+<script src="assets/palette-switcher.js"></script>
+</body>
+</html>
