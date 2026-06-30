@@ -10,3 +10,5 @@ export { Testimonial } from "./Testimonial";
 export type { TestimonialProps } from "./Testimonial";
 export { ProgramCard } from "./ProgramCard";
 export type { ProgramCardProps } from "./ProgramCard";
+export { SparkMark } from "./SparkMark";
+export type { SparkMarkProps } from "./SparkMark";

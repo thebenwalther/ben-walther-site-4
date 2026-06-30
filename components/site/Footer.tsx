@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { SparkMark } from "@/components/ui";
+import { socials } from "@/lib/site";
 import styles from "./Footer.module.css";
 
 /** Site footer with explore + connect columns. */
@@ -7,7 +9,10 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={`bw-container ${styles.row}`}>
         <div>
-          <div className={styles.brand}>Ben Walther</div>
+          <div className={styles.brandRow}>
+            <SparkMark size={20} />
+            <span className={styles.brand}>Ben Walther</span>
+          </div>
           <div className={styles.tagline}>Life &amp; growth coaching for people ready to become themselves.</div>
         </div>
         <div className={styles.cols}>
@@ -46,18 +51,18 @@ export function Footer() {
           </div>
           <div>
             <div className={styles.h4}>Connect</div>
-            <a className={styles.link} href="#">
+            <a className={styles.link} href={socials.x.href} target="_blank" rel="noopener noreferrer">
+              X (Twitter)
+            </a>
+            <a className={styles.link} href={socials.instagram.href} target="_blank" rel="noopener noreferrer">
               Instagram
             </a>
-            <a className={styles.link} href="#">
+            <a className={styles.link} href={socials.linkedin.href} target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a className={styles.link} href="#">
-              YouTube
-            </a>
-            <a className={styles.link} href="#">
+            <Link className={styles.link} href="/resources/reset-email-course">
               Newsletter
-            </a>
+            </Link>
           </div>
         </div>
       </div>

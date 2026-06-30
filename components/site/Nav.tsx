@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui";
+import { Button, SparkMark } from "@/components/ui";
 import styles from "./Nav.module.css";
 
 const links = [
@@ -20,12 +20,7 @@ export function Nav() {
     <header className={styles.header}>
       <nav className={`bw-container ${styles.nav}`}>
         <Link href="/" className={styles.brand}>
-          <svg width="22" height="22" viewBox="0 0 100 100" aria-hidden="true" className={styles.spark}>
-            <path
-              fill="var(--accent)"
-              d="M50 12 C53.6 40 59.5 45.9 88 50 C59.5 54.1 53.6 60 50 88 C46.4 60 40.5 54.1 12 50 C40.5 45.9 46.4 40 50 12 Z"
-            />
-          </svg>
+          <SparkMark size={22} className={styles.spark} />
           <span className={styles.wordmark}>Ben Walther</span>
         </Link>
 

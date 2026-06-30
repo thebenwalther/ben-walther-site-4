@@ -11,6 +11,11 @@
   gap: 40px;
   flex-wrap: wrap;
 }
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .brand {
   font-family: var(--font-sans);
   font-weight: var(--fw-black);

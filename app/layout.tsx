@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk, Instrument_Serif } from "next/font/google";
+import { siteUrl, siteName, siteTitle, siteDescription, socials } from "@/lib/site";
 import "./globals.css";
 
 const hanken = Hanken_Grotesk({
@@ -18,9 +19,22 @@ const instrument = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Ben Walther — Life & Personal Growth Coaching",
-  description:
-    "High-accountability coaching for people finally ready to close the gap between who they are and who they know they could be. Take the free Clarity Assessment.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    siteName,
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    creator: socials.x.handle,
+  },
 };
 
 export default function RootLayout({
