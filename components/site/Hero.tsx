@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
-import { Button, Kicker, StatBlock } from "@/components/ui";
+import { Button, Kicker } from "@/components/ui";
 import { BookingCta } from "./BookingCta";
 import headshot from "@/public/images/ben-headshot.jpg";
 import styles from "./Hero.module.css";
@@ -12,7 +12,8 @@ function HeroChip({ children, className }: { children: React.ReactNode; classNam
 const defaultLead = (
   <>
     Coaching for capable people who&apos;ve quietly settled. I&apos;ll help you name the pattern that keeps you
-    playing small — and close the gap between who you&apos;ve been and who you actually are.
+    playing small, rebuild your self-trust — and close the gap between who you&apos;ve been and who you actually
+    are.
   </>
 );
 
@@ -44,9 +45,7 @@ export function Hero({ lead = defaultLead }: { lead?: ReactNode } = {}) {
               <span className="bw-stars" aria-hidden="true">
                 ✦
               </span>{" "}
-              <span>
-                <b className={styles.proofStrong}>15 years</b> in classrooms and on courts — now in your corner
-              </span>
+              <span>From classrooms and courts to your corner.</span>
             </div>
           </div>
           <div className={styles.photoWrap}>
@@ -74,10 +73,6 @@ export function Hero({ lead = defaultLead }: { lead?: ReactNode } = {}) {
               </div>
             </HeroChip>
           </div>
-        </div>
-        <div className={styles.stats}>
-          <StatBlock tone="dark" value="15" unit="yrs" label="as an educator & coach" />
-          <StatBlock tone="dark" value="1,000s" label="students & athletes guided" />
         </div>
       </div>
     </section>
