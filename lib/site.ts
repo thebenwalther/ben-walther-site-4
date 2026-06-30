@@ -14,7 +14,7 @@ export const siteName = "Ben Walther";
 export const siteTitle = "Ben Walther — Life & Personal Growth Coaching";
 
 export const siteDescription =
-  "Coaching for capable people who've quietly settled. Ben Walther helps you name the pattern that keeps you playing small and close the gap between who you are and who you know you can be. Start with the free Clarity Assessment.";
+  "Coaching for capable people who've quietly settled. Ben Walther helps you name the pattern that keeps you playing small and close the gap between who you've been and who you actually are. Start with the free Clarity Assessment.";
 
 /** Public social profiles. */
 export const socials = {

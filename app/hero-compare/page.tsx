@@ -9,32 +9,22 @@ export const metadata: Metadata = {
 
 const variants: { id: string; label: string; lead: ReactNode }[] = [
   {
-    id: "A",
-    label: "Option A — current · “who you know you can be”",
+    id: "1",
+    label: "Option 1 — current · “who you actually are” (bold, present-tense)",
     lead: (
       <>
         Coaching for capable people who&apos;ve quietly settled. I&apos;ll help you name the pattern that keeps
-        you playing small — and close the gap between who you are and who you know you can be.
+        you playing small — and close the gap between who you&apos;ve been and who you actually are.
       </>
     ),
   },
   {
-    id: "B",
-    label: "Option B — ties to the headline · “who you’re built to be”",
+    id: "2",
+    label: "Option 2 — warmer · “who you’re created to be” (echoes the headline)",
     lead: (
       <>
         Coaching for capable people who&apos;ve quietly settled. I&apos;ll help you name the pattern that keeps
-        you playing small — and close the gap between who you are and who you&apos;re built to be.
-      </>
-    ),
-  },
-  {
-    id: "C",
-    label: "Option C — boldest · “who you actually are”",
-    lead: (
-      <>
-        Coaching for capable people who&apos;ve quietly settled. I&apos;ll help you name the pattern that keeps
-        you playing small — and close the gap between how you&apos;ve been living and who you actually are.
+        you playing small — and close the gap between who you are and who you&apos;re created to be.
       </>
     ),
   },

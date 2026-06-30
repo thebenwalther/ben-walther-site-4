@@ -12,7 +12,7 @@ function HeroChip({ children, className }: { children: React.ReactNode; classNam
 const defaultLead = (
   <>
     Coaching for capable people who&apos;ve quietly settled. I&apos;ll help you name the pattern that keeps you
-    playing small — and close the gap between who you are and who you know you can be.
+    playing small — and close the gap between who you&apos;ve been and who you actually are.
   </>
 );
 
@@ -28,7 +28,7 @@ export function Hero({ lead = defaultLead }: { lead?: ReactNode } = {}) {
               Life &amp; Personal Growth Coach
             </Kicker>
             <h1 className={styles.headline}>
-              You weren&apos;t built to settle.{" "}
+              You weren&apos;t created to settle.{" "}
               <span className={`bw-em ${styles.accentWord}`}>Let&apos;s prove it.</span>
             </h1>
             <p className={styles.lead}>{lead}</p>

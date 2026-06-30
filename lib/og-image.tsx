@@ -16,7 +16,7 @@ export interface ShareImageOptions {
 /** Shared branded social-share card (Forest & Gold), parameterized per page. */
 export function renderShareImage({
   kicker = "Life & Personal Growth Coaching",
-  title = "You weren't built to settle.",
+  title = "You weren't created to settle.",
   cta = "Take the free Clarity Assessment →",
 }: ShareImageOptions = {}) {
   return new ImageResponse(
