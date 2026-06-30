@@ -14,7 +14,7 @@ export const siteName = "Ben Walther";
 export const siteTitle = "Ben Walther — Life & Personal Growth Coaching";
 
 export const siteDescription =
-  "High-accountability coaching for people finally ready to close the gap between who they are and who they know they could be. Start with the free Clarity Assessment.";
+  "Coaching for capable people who've quietly settled. Ben Walther helps you name the pattern keeping you small and close the gap between who you are and who you could be. Start with the free Clarity Assessment.";
 
 /** Public social profiles. */
 export const socials = {

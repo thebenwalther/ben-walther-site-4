@@ -24,8 +24,8 @@ export function Hero() {
               <span className={`bw-em ${styles.accentWord}`}>Let&apos;s prove it.</span>
             </h1>
             <p className={styles.lead}>
-              High-accountability coaching for people who are finally ready to close the gap between who they are
-              and who they know they could be.
+              Coaching for capable people who&apos;ve quietly settled. I&apos;ll help you name the pattern keeping
+              you small — and close the gap between who you are and who you could be.
             </p>
             <div className={styles.ctaRow}>
               <Button variant="accent" iconRight="→" href="/resources/clarity-assessment">
