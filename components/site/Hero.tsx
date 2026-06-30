@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { Button, Kicker, StatBlock } from "@/components/ui";
 import { BookingCta } from "./BookingCta";
@@ -8,8 +9,15 @@ function HeroChip({ children, className }: { children: React.ReactNode; classNam
   return <div className={`${styles.chip} ${className}`}>{children}</div>;
 }
 
+const defaultLead = (
+  <>
+    Coaching for capable people who&apos;ve quietly settled. I&apos;ll help you name the pattern that keeps you
+    playing small — and close the gap between who you are and who you know you can be.
+  </>
+);
+
 /** Dark hero — headline, portrait with proof chips, and the stat strip. */
-export function Hero() {
+export function Hero({ lead = defaultLead }: { lead?: ReactNode } = {}) {
   return (
     <section className={styles.hero}>
       <div aria-hidden="true" className={styles.glow} />
@@ -23,10 +31,7 @@ export function Hero() {
               You weren&apos;t built to settle.{" "}
               <span className={`bw-em ${styles.accentWord}`}>Let&apos;s prove it.</span>
             </h1>
-            <p className={styles.lead}>
-              Coaching for capable people who&apos;ve quietly settled. I&apos;ll help you name the pattern that
-              keeps you playing small — and close the gap between who you are and who you know you can be.
-            </p>
+            <p className={styles.lead}>{lead}</p>
             <div className={styles.ctaRow}>
               <Button variant="accent" iconRight="→" href="/resources/clarity-assessment">
                 Take the free Clarity Assessment
