@@ -5,6 +5,10 @@ export const alt = ogAlt;
 export const size = ogSize;
 export const contentType = ogContentType;
 
-export default function TwitterImage() {
-  return renderShareImage();
+export default function Image() {
+  return renderShareImage({
+    kicker: "Free Tool · 5 Minutes",
+    title: "Where's the gap, really?",
+    cta: "Take the free Clarity Assessment →",
+  });
 }

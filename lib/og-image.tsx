@@ -4,8 +4,21 @@ export const ogSize = { width: 1200, height: 630 };
 export const ogAlt = "Ben Walther — Life & Personal Growth Coaching";
 export const ogContentType = "image/png";
 
-/** Shared branded social-share card (Forest & Gold). */
-export function renderShareImage() {
+export interface ShareImageOptions {
+  /** Uppercase gold eyebrow. */
+  kicker?: string;
+  /** The big headline. */
+  title?: string;
+  /** Gold pill at the bottom. */
+  cta?: string;
+}
+
+/** Shared branded social-share card (Forest & Gold), parameterized per page. */
+export function renderShareImage({
+  kicker = "Life & Personal Growth Coaching",
+  title = "You weren't built to settle.",
+  cta = "Take the free Clarity Assessment →",
+}: ShareImageOptions = {}) {
   return new ImageResponse(
     (
       <div
@@ -44,7 +57,7 @@ export function renderShareImage() {
               marginBottom: 26,
             }}
           >
-            Life &amp; Personal Growth Coaching
+            {kicker}
           </div>
           <div
             style={{
@@ -52,10 +65,10 @@ export function renderShareImage() {
               fontWeight: 800,
               lineHeight: 1.04,
               letterSpacing: "-0.03em",
-              maxWidth: 940,
+              maxWidth: 980,
             }}
           >
-            You weren&apos;t built to settle.
+            {title}
           </div>
         </div>
 
@@ -71,7 +84,7 @@ export function renderShareImage() {
               borderRadius: 999,
             }}
           >
-            Take the free Clarity Assessment →
+            {cta}
           </div>
         </div>
       </div>
