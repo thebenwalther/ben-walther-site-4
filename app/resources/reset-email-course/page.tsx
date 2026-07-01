@@ -20,7 +20,7 @@ export default function ResetCoursePage() {
             The 5-Day <span className="bw-em">Reset.</span>
           </>
         }
-        lead="Five short lessons that move you from a vague, heavy stuck-feeling to one specific, do-able step — and actually taking it. No fluff, no 40-minute videos. Start right now below, at your own pace."
+        lead="Five short lessons that move you from a vague, heavy stuck-feeling to one specific, do-able step — and actually taking it. No fluff, no 40-minute videos. Day 1 is completely free below — no email required."
         back={{ href: "/resources", label: "All resources" }}
         wide
       />
@@ -30,9 +30,8 @@ export default function ResetCoursePage() {
           <div className={styles.intro}>
             <p className={styles.introBody}>
               This is the exact opening sequence I run with new 1:1 clients — the part that turns &ldquo;I don&apos;t
-              even know where to start&rdquo; into a first move by the end of the week. It&apos;s written as five
-              short emails, but you don&apos;t have to wait on your inbox: read each one right here, do the
-              day&apos;s practice, and move to the next whenever you&apos;re ready.
+              even know where to start&rdquo; into a first move by the end of the week. Read Day 1 free below, no
+              email needed. Like it? Drop your email afterward and Days 2–5 open right up — no waiting, no drip.
             </p>
           </div>
 
@@ -43,9 +42,9 @@ export default function ResetCoursePage() {
       <section className={styles.gateWrap}>
         <div className={`bw-container ${styles.gateInner}`}>
           <EmailGate
-            kicker="Prefer it in your inbox?"
-            title="Get all 5 days by email instead"
-            lead="Same course, delivered the classic way — one email a day for five days, so you can come back to it without bookmarking this page."
+            kicker="Prefer the classic pace?"
+            title="Get it delivered one email a day"
+            lead="Rather than reading all of Days 2–5 at once, get them the traditional way — one email a day for five days, so it's harder to skip ahead and easier to actually finish."
             cta="Send me the emails"
             placeholder="you@email.com"
             successTitle="You're in. Day 1 lands tomorrow."

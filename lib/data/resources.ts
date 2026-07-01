@@ -41,8 +41,8 @@ export const resources: Resource[] = [
     icon: "↗",
     title: "The 5-Day Reset",
     blurb:
-      "Five short, honest lessons that walk you from foggy to a single, do-able next step — the same opening sequence I use with new 1:1 clients. Run it right here at your own pace, or get it delivered by email.",
-    meta: "5 days · run it now or by email · free",
+      "Five short, honest lessons that walk you from foggy to a single, do-able next step — the same opening sequence I use with new 1:1 clients. Day 1 is free; drop your email afterward to unlock the rest.",
+    meta: "5 days · Day 1 free · free",
   },
   {
     slug: "values-compass",

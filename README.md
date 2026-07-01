@@ -26,7 +26,7 @@ pages. Everything is real and usable with no backend:
 | --- | --- | --- |
 | **The Clarity Assessment** | Tool | 12-question quiz scored entirely client-side across three dimensions (clarity, momentum, self-trust). Gives a personalized banded result and recommends the right next resource. `/resources/clarity-assessment` |
 | **The Becoming Framework** | Framework | Full deep-dive on the 3-stage method (Get Clear → Get Unstuck → Get Moving), each with a practice you can run on yourself. `/resources/becoming-framework` |
-| **The 5-Day Reset** | Course | Full 5-day course you can run right in the browser — real lesson content per day, a saved reflection prompt (localStorage, client-only), and progress tracking. Email signup is offered as an alternate delivery. `/resources/reset-email-course` |
+| **The 5-Day Reset** | Course | Full 5-day course, run right in the browser — real lesson content per day, a saved reflection prompt (localStorage, client-only), and progress tracking. Day 1 is fully open (no email); an email unlocks Days 2–5 instantly (list-building, not a drip wait). Classic one-a-day email delivery is offered as an alternate pace. `/resources/reset-email-course` |
 | **Values Compass / Stuck-Loop Map / Hard-Conversation Script** | Guides | Three worksheet/template guides with real step-by-step content + email-gated PDF download. `/resources/guides/[slug]` |
 
 Email capture (`EmailGate`) and call booking (`BookingModal`) are
