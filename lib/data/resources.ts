@@ -47,12 +47,12 @@ export const resources: Resource[] = [
   {
     slug: "values-compass",
     href: "/resources/guides/values-compass",
-    kind: "Guide",
+    kind: "Tool",
     icon: "◇",
     title: "The Values Compass",
     blurb:
-      "A printable worksheet to surface the handful of values you actually live by — not the ones you'd put on a poster — and use them as a decision filter the next time you're stuck.",
-    meta: "Worksheet · PDF · free",
+      "An interactive worksheet that surfaces the handful of values you actually live by — not the ones you'd put on a poster — and turns your top one into a decision filter you can use the next time you're stuck.",
+    meta: "Interactive · ~10 min · free",
   },
   {
     slug: "stuck-loop-map",
