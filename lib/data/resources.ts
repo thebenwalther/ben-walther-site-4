@@ -41,18 +41,18 @@ export const resources: Resource[] = [
     icon: "↗",
     title: "The 5-Day Reset",
     blurb:
-      "Five short, honest lessons that walk you from foggy to a single, do-able next step — the same opening sequence I use with new 1:1 clients. Day 1 is free; drop your email afterward to unlock the rest.",
-    meta: "5 days · Day 1 free · free",
+      "A free email course. One short, honest email a day for five days that walks you from foggy to a single, do-able next step. The same opening sequence I use with new 1:1 clients.",
+    meta: "5 days · email course · free",
   },
   {
     slug: "values-compass",
     href: "/resources/guides/values-compass",
-    kind: "Tool",
+    kind: "Guide",
     icon: "◇",
     title: "The Values Compass",
     blurb:
-      "An interactive worksheet that surfaces the handful of values you actually live by — not the ones you'd put on a poster — and turns your top one into a decision filter you can use the next time you're stuck.",
-    meta: "Interactive · ~10 min · free",
+      "A printable worksheet to surface the handful of values you actually live by — not the ones you'd put on a poster — and use them as a decision filter the next time you're stuck.",
+    meta: "Worksheet · PDF · free",
   },
   {
     slug: "stuck-loop-map",

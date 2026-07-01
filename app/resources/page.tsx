@@ -46,7 +46,7 @@ export default function ResourcesPage() {
             </div>
           </div>
 
-          <h2 className={styles.groupHead}>More free resources</h2>
+          <h2 className={styles.groupHead}>Frameworks, courses &amp; guides</h2>
           <div className={styles.grid}>
             {rest.map((r) => (
               <ResourceCard key={r.slug} resource={r} />

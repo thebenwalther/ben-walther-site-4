@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/site/PageHeader";
 import { EmailGate } from "@/components/site/EmailGate";
-import { ValuesCompass } from "@/components/compass/ValuesCompass";
 import { getGuide, guideSlugs } from "@/lib/data/guides";
 import styles from "./guide.module.css";
 
@@ -37,30 +36,6 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   ) : (
     guide.title
   );
-
-  if (slug === "values-compass") {
-    return (
-      <>
-        <PageHeader
-          kicker="Interactive worksheet"
-          title={titleNode}
-          lead={guide.lead}
-          back={{ href: "/resources", label: "All resources" }}
-          wide
-        />
-        <section className={styles.section}>
-          <div className="bw-container">
-            <div className={styles.toolIntro}>
-              {guide.intro.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-            <ValuesCompass />
-          </div>
-        </section>
-      </>
-    );
-  }
 
   return (
     <>

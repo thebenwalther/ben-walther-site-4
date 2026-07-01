@@ -1,17 +1,6 @@
 .section {
   padding: 76px 0 60px;
 }
-.toolIntro {
-  max-width: 640px;
-  margin: 0 auto 44px;
-}
-.toolIntro p {
-  font-family: var(--font-sans);
-  font-size: var(--fs-body-lg);
-  line-height: 1.65;
-  color: var(--text-body);
-  margin: 0 0 18px;
-}
 .layout {
   display: grid;
   grid-template-columns: 1fr 320px;

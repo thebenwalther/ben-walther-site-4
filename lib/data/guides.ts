@@ -27,7 +27,7 @@ export interface GuideContent {
 export const guideContent: Record<string, GuideContent> = {
   "values-compass": {
     slug: "values-compass",
-    kind: "Interactive worksheet",
+    kind: "Guide · Worksheet",
     title: "The Values Compass",
     accentWord: "Compass",
     lead: "A worksheet to surface the handful of values you actually live by — not the ones you'd put on a poster — and use them as a decision filter the next time you're stuck.",
