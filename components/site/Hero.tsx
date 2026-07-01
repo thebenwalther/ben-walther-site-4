@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import Image from "next/image";
 import { Button, Kicker } from "@/components/ui";
 import { BookingCta } from "./BookingCta";
@@ -17,8 +16,8 @@ const defaultLead = (
   </>
 );
 
-/** Dark hero — headline, portrait with proof chips, and the stat strip. */
-export function Hero({ lead = defaultLead }: { lead?: ReactNode } = {}) {
+/** Dark hero — headline, portrait with proof chips, and the proof line. */
+export function Hero() {
   return (
     <section className={styles.hero}>
       <div aria-hidden="true" className={styles.glow} />
@@ -32,7 +31,7 @@ export function Hero({ lead = defaultLead }: { lead?: ReactNode } = {}) {
               You weren&apos;t created to settle.{" "}
               <span className={`bw-em ${styles.accentWord}`}>Let&apos;s prove it.</span>
             </h1>
-            <p className={styles.lead}>{lead}</p>
+            <p className={styles.lead}>{defaultLead}</p>
             <div className={styles.ctaRow}>
               <Button variant="accent" iconRight="→" href="/resources/clarity-assessment">
                 Take the free Clarity Assessment
