@@ -99,4 +99,25 @@
   .mobilePanelOpen {
     display: flex;
   }
+  .right {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 430px) {
+  .wordmark {
+    font-size: 19px;
+  }
+  .navCta {
+    padding: 11px 14px;
+    font-size: 13.5px;
+  }
+}
+
+/* Smallest phones: the brand + burger alone fill the bar; the hero's
+   gold CTA is immediately below, so the nav CTA can go. */
+@media (max-width: 360px) {
+  .navCta {
+    display: none;
+  }
 }

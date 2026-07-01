@@ -37,7 +37,7 @@ export default function ResourcesPage() {
               <h2 className={styles.noteTitle}>Where to start</h2>
               <p className={styles.noteBody}>
                 Not sure which one you need? Take the <strong>Clarity Assessment</strong> first. It&apos;s five
-                minutes, and it tells you exactly where the gap is right now — then points you to the framework,
+                minutes, and it tells you exactly where the gap is right now, then points you to the framework,
                 course, or guide built for that gap.
               </p>
               <p className={styles.noteBody}>

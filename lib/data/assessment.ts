@@ -38,7 +38,7 @@ export const dimensions: Record<Dimension, DimensionMeta> = {
   momentum: {
     key: "momentum",
     label: "Momentum",
-    blurb: "Whether you're actually moving — or circling the same thing on repeat.",
+    blurb: "Whether you're actually moving, or circling the same thing on repeat.",
     stage: "Get Unstuck → Get Moving",
     recommend: {
       title: "The Stuck-Loop Map",
@@ -68,12 +68,12 @@ export const questions: Question[] = [
   // Momentum
   { id: "m1", dimension: "momentum", text: "I'm actively moving on the thing that matters most to me right now.", positive: true },
   { id: "m2", dimension: "momentum", text: "I've been circling the same change for a long time without really starting.", positive: false },
-  { id: "m3", dimension: "momentum", text: "I take a meaningful step toward what I want most weeks.", positive: true },
+  { id: "m3", dimension: "momentum", text: "Most weeks, I take a meaningful step toward what I want.", positive: true },
   { id: "m4", dimension: "momentum", text: "I tend to wait until I feel ready before I act.", positive: false },
   // Self-trust
   { id: "t1", dimension: "trust", text: "When I commit to something for myself, I follow through.", positive: true },
   { id: "t2", dimension: "trust", text: "A setback can knock me off course for weeks.", positive: false },
-  { id: "t3", dimension: "trust", text: "I trust my own judgement without needing outside permission.", positive: true },
+  { id: "t3", dimension: "trust", text: "I trust my own judgment without needing outside permission.", positive: true },
   { id: "t4", dimension: "trust", text: "I keep the promises I make to myself as well as the ones I make to others.", positive: true },
 ];
 
@@ -138,7 +138,7 @@ function bandFor(overall: number): { label: string; summary: string } {
     return {
       label: "You're on the edge of a shift",
       summary:
-        "You're not stuck, exactly — but you're not moving the way you know you could. There's one gap doing most of the holding-back. Close it, and a lot loosens at once.",
+        "You're not stuck, exactly, but you're not moving the way you know you could. Most of it comes down to one gap. Close it, and a lot loosens at once.",
     };
   }
   return {

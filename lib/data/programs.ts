@@ -14,7 +14,7 @@ export const programs: Program[] = [
     name: "The Reset",
     price: "$295 · single 90-min session",
     description:
-      "A deep, focused session to cut through the fog and leave with a clear, do-able next step.",
+      "A deep, focused session to cut through the fog and leave with a clear, doable next step.",
     ctaLabel: "Book a Reset",
   },
   {
@@ -33,6 +33,6 @@ export const programs: Program[] = [
     price: "$420 / month",
     description:
       "Monthly coaching plus between-session support for people building something big and refusing to do it alone.",
-    ctaLabel: "Enquire",
+    ctaLabel: "Inquire",
   },
 ];

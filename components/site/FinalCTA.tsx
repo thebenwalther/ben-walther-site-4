@@ -28,7 +28,7 @@ export function FinalCTA() {
           </Button>
           <BookingCta variant="outline-on-dark">Or book a free intro call</BookingCta>
         </div>
-        <p className={styles.note}>No cost. No pressure. No spam — just a clear read on where you are.</p>
+        <p className={styles.note}>No cost. No pressure. No spam. Just a clear read on where you are.</p>
       </div>
     </section>
   );

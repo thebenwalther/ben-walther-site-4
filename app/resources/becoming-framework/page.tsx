@@ -20,7 +20,7 @@ export default function BecomingFrameworkPage() {
             The Becoming <span className="bw-em">Framework.</span>
           </>
         }
-        lead="The whole method, on one page. Three stages, in order — because trying to get moving before you're clear is why most change doesn't stick. Read it, then steal the practices."
+        lead="The whole method, on one page. Three stages, in order. Trying to get moving before you're clear is why most change doesn't stick. Read it, then steal the practices."
         back={{ href: "/resources", label: "All resources" }}
         wide
       />
@@ -50,7 +50,7 @@ export default function BecomingFrameworkPage() {
                 <p className={styles.stageSummary}>{s.summary}</p>
                 <p className={styles.stageDetail}>{s.detail}</p>
                 <div className={styles.practice}>
-                  <div className={styles.practiceLabel}>Try this this week</div>
+                  <div className={styles.practiceLabel}>Try it this week</div>
                   <p className={styles.practiceText}>{s.practice}</p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default function BecomingFrameworkPage() {
             Not sure which stage you&apos;re <span className="bw-em">actually</span> in?
           </h2>
           <p className={styles.ctaLead}>
-            The Clarity Assessment tells you in five minutes — and points you to the practice built for your
+            The Clarity Assessment tells you in five minutes, then points you to the practice built for your
             sharpest gap.
           </p>
           <Button variant="accent" iconRight="→" href="/resources/clarity-assessment">

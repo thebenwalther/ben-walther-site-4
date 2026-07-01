@@ -35,6 +35,6 @@ export const framework: FrameworkStage[] = [
     summary: "Weekly accountability and doable steps that compound into a different life.",
     detail:
       "Change isn't one big leap — it's a hundred small, honest choices in a row, made under real accountability. Get Moving is the sustained, weekly practice of doing the next true thing, with someone in your corner who won't let you quietly downgrade the goal.",
-    practice: "We set a weekly cadence of small, specific commitments — and a standing call where you can't hide.",
+    practice: "We set a weekly cadence of small, specific commitments, plus a standing call where you can't hide.",
   },
 ];

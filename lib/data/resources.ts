@@ -31,7 +31,7 @@ export const resources: Resource[] = [
     icon: "✦",
     title: "The Becoming Framework",
     blurb:
-      "The simple three-stage model behind every program I run — Get Clear, Get Unstuck, Get Moving. The full breakdown of each stage, what tends to go wrong, and a practice you can run on yourself this week.",
+      "The simple three-stage model behind every program I run: Get Clear, Get Unstuck, Get Moving. The full breakdown of each stage, what tends to go wrong, and a practice you can run on yourself this week.",
     meta: "Deep-dive guide · ~12 min read",
   },
   {
@@ -41,7 +41,7 @@ export const resources: Resource[] = [
     icon: "↗",
     title: "The 5-Day Reset",
     blurb:
-      "A free email course. One short, honest email a day for five days that walks you from foggy to a single, do-able next step. The same opening sequence I use with new 1:1 clients.",
+      "A free email course. One short, honest email a day for five days that walks you from foggy to a single, doable next step. The same opening sequence I use with new 1:1 clients.",
     meta: "5 days · email course · free",
   },
   {

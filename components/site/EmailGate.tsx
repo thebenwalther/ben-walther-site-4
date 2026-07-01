@@ -28,7 +28,7 @@ export function EmailGate({
   cta = "Send it to me",
   placeholder = "you@email.com",
   successTitle = "Check your inbox.",
-  successBody = "It's on the way — give it a minute, and check spam if it's hiding. While you wait, the Clarity Assessment is a good next five minutes.",
+  successBody = "It's on the way. Give it a minute, and check spam if it's hiding. While you wait, the Clarity Assessment is a good next five minutes.",
   note = "One email with the download. No spam, unsubscribe anytime.",
 }: EmailGateProps) {
   const [sent, setSent] = React.useState(false);

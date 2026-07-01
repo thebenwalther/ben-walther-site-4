@@ -99,7 +99,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             lead={guide.download.lead}
             cta={guide.download.cta}
             successTitle="On its way."
-            successBody="Check your inbox for the printable PDF. While you wait — the Clarity Assessment will tell you which guide to use next."
+            successBody="Check your inbox for the printable PDF. While you wait, the Clarity Assessment will tell you which guide to use next."
           />
         </div>
       </section>

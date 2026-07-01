@@ -44,26 +44,26 @@ export const guideContent: Record<string, GuideContent> = {
     steps: [
       {
         title: "Mine your evidence, not your ideals",
-        body: "Write down three moments from the last year when you felt most alive, and three when you felt most resentful. Don't interpret yet — just capture them. Your values live in the pattern underneath, not in the words you'd choose for a bio.",
+        body: "Write down three moments from the last year when you felt most alive, and three when you felt most resentful. Don't interpret yet. Just capture them. Your values live in the pattern underneath, not in the words you'd choose for a bio.",
       },
       {
         title: "Name the value under each moment",
-        body: "For each alive moment, ask: what was being honored here? For each resentful moment, ask: what was being violated? Resentment is one of the most honest signals you have — it fires when something you value is being stepped on.",
+        body: "For each alive moment, ask: what was being honored here? For each resentful moment, ask: what was being violated? Resentment is one of the most honest signals you have. It fires when something you value is being stepped on.",
       },
       {
         title: "Cut the list to five",
-        body: "You'll have a dozen. Force it down to five by asking of each: \"Have I sacrificed something real to protect this?\" If the answer is no, it's an aspiration, not a value. Aspirations are fine — but they don't belong on the compass.",
+        body: "You'll have a dozen. Force it down to five by asking of each: \"Have I sacrificed something real to protect this?\" If the answer is no, it's an aspiration, not a value. Aspirations are fine, but they don't belong on the compass.",
       },
       {
         title: "Write your decision filter",
-        body: "Turn your top value into a single question you can ask in the moment, e.g. \"Does this protect my freedom or trade it away?\" When you're stuck, you don't need more options — you need a sharper filter. This is it.",
+        body: "Turn your top value into a single question you can ask in the moment, e.g., \"Does this protect my freedom or trade it away?\" When you're stuck, you don't need more options — you need a sharper filter. This is it.",
       },
     ],
     outro:
       "Keep the finished page somewhere you'll see it before the next hard decision — not after. That's the whole point.",
     download: {
       title: "Get the printable Values Compass",
-      lead: "The full worksheet as a clean, printable PDF — the four passes, the conflict exercise, and a page to keep.",
+      lead: "The full worksheet as a clean, printable PDF: the four passes, the conflict exercise, and a page to keep.",
       cta: "Send me the worksheet",
     },
   },
@@ -90,7 +90,7 @@ export const guideContent: Record<string, GuideContent> = {
       },
       {
         title: "Find the trigger",
-        body: "What reliably comes right before the loop fires? A feeling (overwhelm), a time (Sunday night), a situation (an empty calendar)? The trigger is where interruption is cheapest — long before willpower is involved.",
+        body: "What reliably comes right before the loop fires? A feeling (overwhelm), a time (Sunday night), a situation (an empty calendar)? The trigger is where interruption is cheapest, long before willpower is involved.",
       },
       {
         title: "Catch the story",
@@ -98,7 +98,7 @@ export const guideContent: Record<string, GuideContent> = {
       },
       {
         title: "Expose the payoff",
-        body: "Here's the uncomfortable one: staying stuck is paying you something. Safety from failure? Permission to rest? Being right about how hard it is? Name it honestly — because you'll need to get that payoff another way before you'll let the loop go.",
+        body: "Here's the uncomfortable one: staying stuck is paying you something. Safety from failure? Permission to rest? Being right about how hard it is? Name it honestly, because you'll need to get that payoff another way before you'll let the loop go.",
       },
       {
         title: "Pick one interruption",
@@ -130,20 +130,20 @@ export const guideContent: Record<string, GuideContent> = {
     ],
     steps: [
       {
-        title: "Frame — set the table",
+        title: "Frame: set the table",
         body: "Open by naming why you're raising it and what you're hoping for. \"I want to talk about something because the relationship matters to me, not because I'm angry.\" The frame tells their nervous system whether this is an attack or an invitation. Get it right and they stay in the room.",
       },
       {
-        title: "Truth — say the actual thing",
-        body: "One clear sentence, no preamble, no five qualifiers. \"When plans change last-minute, I end up feeling like an afterthought.\" Use \"I\" and describe the specific behavior, not their character. Specific is kind; vague is an ambush.",
+        title: "Truth: say the actual thing",
+        body: "One clear sentence, no preamble, no five qualifiers. \"When plans change at the last minute, I end up feeling like an afterthought.\" Use \"I\" and describe the specific behavior, not their character. Specific is kind; vague is an ambush.",
       },
       {
-        title: "Impact — make it human",
+        title: "Impact: make it human",
         body: "Briefly name the cost — to you, to them, to the thing you share. Not to guilt-trip, but so the stakes are real. \"It's made me start holding back, and I don't want to be someone who holds back with you.\"",
       },
       {
-        title: "Ask — be concrete",
-        body: "End with a specific, do-able request, not a vague hope. \"Could we lock plans the day before instead of the hour of?\" An ask gives them a way to say yes. A complaint just gives them something to defend against.",
+        title: "Ask: be concrete",
+        body: "End with a specific, doable request, not a vague hope. \"Could we lock plans the day before instead of the hour of?\" An ask gives them a way to say yes. A complaint just gives them something to defend against.",
       },
     ],
     outro:

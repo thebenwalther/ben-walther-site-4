@@ -32,7 +32,7 @@ export function Nav() {
               </Link>
             ))}
           </div>
-          <Button variant="accent" size="sm" href="/resources/clarity-assessment">
+          <Button variant="accent" size="sm" href="/resources/clarity-assessment" className={styles.navCta}>
             Free assessment
           </Button>
           <button

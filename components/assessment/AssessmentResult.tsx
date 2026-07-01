@@ -18,7 +18,7 @@ export function AssessmentResultView({ result, onRestart }: { result: Result; on
           {result.overall}
           <span className={styles.scoreUnit}>/100</span>
         </div>
-        <div className={styles.scoreLabel}>your overall clarity &amp; momentum score</div>
+        <div className={styles.scoreLabel}>your overall score across clarity, momentum &amp; self-trust</div>
       </div>
 
       <div className={styles.bars}>
