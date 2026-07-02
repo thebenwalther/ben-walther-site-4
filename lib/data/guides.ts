@@ -21,6 +21,8 @@ export interface GuideContent {
     title: string;
     lead: string;
     cta: string;
+    /** Served path of the real PDF in public/downloads. */
+    file: string;
   };
 }
 
@@ -62,9 +64,10 @@ export const guideContent: Record<string, GuideContent> = {
     outro:
       "Keep the finished page somewhere you'll see it before the next hard decision — not after. That's the whole point.",
     download: {
-      title: "Get the printable Values Compass",
-      lead: "The full worksheet as a clean, printable PDF: the four passes, the conflict exercise, and a page to keep.",
-      cta: "Send me the worksheet",
+      title: "Download the printable Values Compass",
+      lead: "The full worksheet as a clean, one-page PDF: all four passes and a decision filter to keep where you'll see it.",
+      cta: "Download the worksheet",
+      file: "/downloads/values-compass.pdf",
     },
   },
   "stuck-loop-map": {
@@ -107,9 +110,10 @@ export const guideContent: Record<string, GuideContent> = {
     ],
     outro: "Run the map on one loop. Just one. The skill transfers; the relief is immediate.",
     download: {
-      title: "Get the printable Stuck-Loop Map",
-      lead: "The blank map, the worked example, and the interruption planner as a printable PDF.",
-      cta: "Send me the map",
+      title: "Download the printable Stuck-Loop Map",
+      lead: "The blank map, a worked example, and the interruption planner on one printable page.",
+      cta: "Download the map",
+      file: "/downloads/stuck-loop-map.pdf",
     },
   },
   "hard-conversation-script": {
@@ -149,9 +153,10 @@ export const guideContent: Record<string, GuideContent> = {
     outro:
       "Draft it in the template first, read it once out loud, then have the conversation while it's still uncomfortable. Waiting only raises the stakes.",
     download: {
-      title: "Get the Hard-Conversation template",
-      lead: "The four-move template with prompts for each part, plus example phrasing, as a printable PDF.",
-      cta: "Send me the template",
+      title: "Download the Hard-Conversation template",
+      lead: "The four-move template with prompts and example phrasing for each part, ready to draft on before you speak.",
+      cta: "Download the template",
+      file: "/downloads/hard-conversation-script.pdf",
     },
   },
 };

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  @page { size: Letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 8.5in; height: 11in;
+    padding: 0.62in 0.7in 0.5in;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: #23231E;
+    background: #FFFFFF;
+    display: flex; flex-direction: column;
+  }
+  .head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+  .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 13px; color: #1C3A2E; }
+  .kind { font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #C6A664; padding-top: 3px; }
+  h1 { font-weight: 800; font-size: 30px; letter-spacing: -0.025em; color: #1C3A2E; line-height: 1.02; }
+  h1 .em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: #C6A664; }
+  .lead { font-size: 11.5px; line-height: 1.5; color: #6E6A5E; margin: 8px 0 14px; max-width: 6.5in; }
+
+  .setup { border: 1.5px solid #C6A664; border-radius: 12px; padding: 11px 14px; margin-bottom: 14px; }
+  .setupLabel { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #C6A664; margin-bottom: 7px; }
+  .sentence { font-size: 11.5px; line-height: 2.1; color: #23231E; }
+  .blank { display: inline-block; border-bottom: 1px solid #D8D2C4; min-width: 1.6in; height: 14px; vertical-align: bottom; }
+
+  .move { background: #FBF8F2; border: 1px solid #E8E2D4; border-radius: 12px; padding: 12px 14px; margin-bottom: 11px; }
+  .moveHead { display: flex; align-items: baseline; gap: 8px; margin-bottom: 3px; }
+  .moveNum { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 18px; color: #C6A664; }
+  .moveTitle { font-weight: 800; font-size: 13.5px; color: #1C3A2E; }
+  .movePrompt { font-size: 9.5px; line-height: 1.45; color: #6E6A5E; margin-bottom: 5px; }
+  .moveExample { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 10.5px; color: #1C3A2E; background: #F3EEE4; border-radius: 8px; padding: 6px 10px; margin-bottom: 9px; }
+  .line { border-bottom: 1px solid #D8D2C4; height: 18px; }
+  .line + .line { margin-top: 2px; }
+
+  .commit { border: 1.5px solid #C6A664; border-radius: 12px; padding: 11px 14px; }
+  .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #E8E2D4; padding-top: 8px; font-size: 8.5px; color: #A5A092; }
+  .foot .spark { color: #C6A664; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="kind">Fill-in template · The Becoming Framework</div>
+      <h1>The Hard-Conversation <span class="em">Script.</span></h1>
+    </div>
+    <div class="brand">
+      <svg width="16" height="16" viewBox="0 0 100 100"><path fill="#C6A664" d="M50 5 C54.5 38 62 45.5 95 50 C62 54.5 54.5 62 50 95 C45.5 62 38 54.5 5 50 C38 45.5 45.5 38 50 5 Z"/></svg>
+      Ben Walther
+    </div>
+  </div>
+  <p class="lead">Four moves that keep the true thing sayable — and hearable. Draft it here, read it once out loud, then have the conversation while it's still uncomfortable.</p>
+
+  <div class="setup">
+    <div class="setupLabel">The conversation I've been avoiding</div>
+    <div class="sentence">About <span class="blank" style="min-width:2.4in"></span> &nbsp;with <span class="blank" style="min-width:1.8in"></span>.</div>
+  </div>
+
+  <div class="move">
+    <div class="moveHead"><span class="moveNum">01</span><span class="moveTitle">Frame: set the table</span></div>
+    <p class="movePrompt">Why you're raising it, and what you're hoping for. The frame tells their nervous system this is an invitation, not an attack.</p>
+    <div class="moveExample">&ldquo;I want to talk about something because the relationship matters to me, not because I'm angry.&rdquo;</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+
+  <div class="move">
+    <div class="moveHead"><span class="moveNum">02</span><span class="moveTitle">Truth: say the actual thing</span></div>
+    <p class="movePrompt">One clear sentence. Use &ldquo;I,&rdquo; describe the specific behavior, not their character. Specific is kind; vague is an ambush.</p>
+    <div class="moveExample">&ldquo;When plans change at the last minute, I end up feeling like an afterthought.&rdquo;</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+
+  <div class="move">
+    <div class="moveHead"><span class="moveNum">03</span><span class="moveTitle">Impact: make it human</span></div>
+    <p class="movePrompt">Name the cost — to you, to them, to the thing you share. Not to guilt-trip; so the stakes are real.</p>
+    <div class="moveExample">&ldquo;It's made me start holding back, and I don't want to be someone who holds back with you.&rdquo;</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+
+  <div class="move">
+    <div class="moveHead"><span class="moveNum">04</span><span class="moveTitle">Ask: be concrete</span></div>
+    <p class="movePrompt">A specific, doable request, not a vague hope. An ask gives them a way to say yes.</p>
+    <div class="moveExample">&ldquo;Could we lock plans the day before instead of the hour of?&rdquo;</div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+
+  <div class="commit">
+    <div class="setupLabel">When I'll have it</div>
+    <div class="sentence">By <span class="blank" style="min-width:1.5in"></span>. Waiting only raises the stakes.</div>
+  </div>
+
+  <div class="foot">
+    <span><span class="spark">✦</span> The conversation you're avoiding is rarely as dangerous as the avoiding.</span>
+    <span>Ben Walther · Life &amp; Personal Growth Coaching</span>
+  </div>
+</body>
+</html>

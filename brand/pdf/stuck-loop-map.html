@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  @page { size: Letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 8.5in; height: 11in;
+    padding: 0.62in 0.7in 0.5in;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: #23231E;
+    background: #FFFFFF;
+    display: flex; flex-direction: column;
+  }
+  .head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+  .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 13px; color: #1C3A2E; }
+  .kind { font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #C6A664; padding-top: 3px; }
+  h1 { font-weight: 800; font-size: 30px; letter-spacing: -0.025em; color: #1C3A2E; line-height: 1.02; }
+  h1 .em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: #C6A664; }
+  .lead { font-size: 11.5px; line-height: 1.5; color: #6E6A5E; margin: 8px 0 14px; max-width: 6.5in; }
+
+  .loopLine { border: 1.5px solid #C6A664; border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; }
+  .loopLabel { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #C6A664; margin-bottom: 8px; }
+  .sentence { font-size: 12px; line-height: 2.1; color: #23231E; }
+  .blank { display: inline-block; border-bottom: 1px solid #D8D2C4; min-width: 1.8in; height: 14px; vertical-align: bottom; }
+
+  .gridWrap { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+  .cell { background: #FBF8F2; border: 1px solid #E8E2D4; border-radius: 12px; padding: 12px 14px; min-height: 1.62in; display: flex; flex-direction: column; }
+  .cellNum { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 18px; color: #C6A664; }
+  .cellTitle { font-weight: 800; font-size: 13px; color: #1C3A2E; margin: 1px 0 3px; }
+  .cellPrompt { font-size: 9.5px; line-height: 1.45; color: #6E6A5E; margin-bottom: 8px; }
+  .cellLines { margin-top: auto; }
+  .line { border-bottom: 1px solid #D8D2C4; height: 17px; }
+
+  .example { background: #1C3A2E; color: #F3EEE4; border-radius: 12px; padding: 11px 14px; font-size: 9.5px; line-height: 1.55; margin-bottom: 14px; }
+  .example b { color: #DCC592; }
+
+  .interrupt { border: 1.5px solid #C6A664; border-radius: 12px; padding: 12px 14px; }
+  .interruptNote { font-size: 10px; color: #6E6A5E; line-height: 1.5; margin-bottom: 8px; }
+  .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #E8E2D4; padding-top: 8px; font-size: 8.5px; color: #A5A092; }
+  .foot .spark { color: #C6A664; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="kind">One-page diagnostic · The Becoming Framework</div>
+      <h1>The Stuck-Loop <span class="em">Map.</span></h1>
+    </div>
+    <div class="brand">
+      <svg width="16" height="16" viewBox="0 0 100 100"><path fill="#C6A664" d="M50 5 C54.5 38 62 45.5 95 50 C62 54.5 54.5 62 50 95 C45.5 62 38 54.5 5 50 C38 45.5 45.5 38 50 5 Z"/></svg>
+      Ben Walther
+    </div>
+  </div>
+  <p class="lead">You can't break a pattern you can't see. Map one loop — just one — and find the cheapest place to interrupt it.</p>
+
+  <div class="loopLine">
+    <div class="loopLabel">Name the loop in one sentence — specific and unflattering</div>
+    <div class="sentence">I keep <span class="blank"></span> instead of <span class="blank"></span>.</div>
+  </div>
+
+  <div class="gridWrap">
+    <div class="cell">
+      <span class="cellNum">01</span>
+      <div class="cellTitle">The trigger</div>
+      <p class="cellPrompt">What reliably comes right before the loop fires? A feeling, a time, a situation?</p>
+      <div class="cellLines"><div class="line"></div><div class="line"></div></div>
+    </div>
+    <div class="cell">
+      <span class="cellNum">02</span>
+      <div class="cellTitle">The story</div>
+      <p class="cellPrompt">What do you tell yourself that makes waiting feel reasonable? Write it word-for-word.</p>
+      <div class="cellLines"><div class="line"></div><div class="line"></div></div>
+    </div>
+    <div class="cell">
+      <span class="cellNum">03</span>
+      <div class="cellTitle">The payoff</div>
+      <p class="cellPrompt">The uncomfortable one: what is staying stuck paying you? Safety? Rest? Being right about how hard it is?</p>
+      <div class="cellLines"><div class="line"></div><div class="line"></div></div>
+    </div>
+    <div class="cell">
+      <span class="cellNum">04</span>
+      <div class="cellTitle">The cost</div>
+      <p class="cellPrompt">And what is the loop quietly taking from you while it runs?</p>
+      <div class="cellLines"><div class="line"></div><div class="line"></div></div>
+    </div>
+  </div>
+
+  <div class="example">
+    <b>Worked example.</b> Loop: &ldquo;I keep researching instead of starting.&rdquo; Trigger: an open evening with no plan. Story: &ldquo;I just need a bit more information first.&rdquo; Payoff: I never have to find out if I'd fail. Cost: a year of standing still. Interruption: when I notice the &ldquo;more information&rdquo; story, I do two minutes of the real thing.
+  </div>
+
+  <div class="interrupt">
+    <div class="loopLabel">Pick one interruption</div>
+    <p class="interruptNote">The smallest move that breaks the circuit at the trigger or the story — not the whole goal. Small, specific, repeatable.</p>
+    <div class="sentence">When I notice <span class="blank" style="min-width:2.2in"></span>, I will <span class="blank" style="min-width:2.2in"></span>.</div>
+  </div>
+
+  <div class="foot">
+    <span><span class="spark">✦</span> Run the map on one loop. The skill transfers; the relief is immediate.</span>
+    <span>Ben Walther · Life &amp; Personal Growth Coaching</span>
+  </div>
+</body>
+</html>

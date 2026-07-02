@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  @page { size: Letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 8.5in; height: 11in;
+    padding: 0.62in 0.7in 0.5in;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: #23231E;
+    background: #FFFFFF;
+    display: flex; flex-direction: column;
+  }
+  .head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+  .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 13px; color: #1C3A2E; }
+  .kind { font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #C6A664; padding-top: 3px; }
+  h1 { font-weight: 800; font-size: 30px; letter-spacing: -0.025em; color: #1C3A2E; line-height: 1.02; }
+  h1 .em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: #C6A664; }
+  .lead { font-size: 11.5px; line-height: 1.5; color: #6E6A5E; margin: 8px 0 16px; max-width: 6.4in; }
+
+  .pass { margin-bottom: 13px; }
+  .passHead { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+  .passNum { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: #C6A664; }
+  .passTitle { font-weight: 800; font-size: 14px; color: #1C3A2E; letter-spacing: -0.01em; }
+  .passNote { font-size: 10px; color: #6E6A5E; margin-bottom: 7px; line-height: 1.45; }
+
+  .cols { display: flex; gap: 18px; }
+  .col { flex: 1; }
+  .colLabel { font-size: 9.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #C6A664; margin-bottom: 4px; }
+  .lineRow { display: flex; gap: 10px; align-items: flex-end; margin-bottom: 13px; }
+  .line { flex: 1; border-bottom: 1px solid #D8D2C4; height: 15px; }
+  .lineSm { width: 1.35in; border-bottom: 1px solid #D8D2C4; height: 15px; }
+  .rowTag { font-size: 8.5px; color: #A5A092; width: 0.42in; padding-bottom: 2px; }
+
+  .fiveRow { display: flex; align-items: flex-end; gap: 8px; margin-bottom: 12px; }
+  .fiveNum { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 16px; color: #C6A664; width: 14px; }
+  .test { background: #F3EEE4; border-radius: 8px; padding: 8px 12px; font-size: 10px; line-height: 1.5; color: #23231E; margin-bottom: 8px; }
+  .test b { color: #1C3A2E; }
+
+  .filterBox { border: 1.5px solid #C6A664; border-radius: 12px; padding: 12px 14px 6px; }
+  .filterTemplate { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 13px; color: #6E6A5E; margin-bottom: 10px; }
+  .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #E8E2D4; padding-top: 8px; font-size: 8.5px; color: #A5A092; }
+  .foot .spark { color: #C6A664; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="kind">Worksheet · The Becoming Framework</div>
+      <h1>The Values <span class="em">Compass.</span></h1>
+    </div>
+    <div class="brand">
+      <svg width="16" height="16" viewBox="0 0 100 100"><path fill="#C6A664" d="M50 5 C54.5 38 62 45.5 95 50 C62 54.5 54.5 62 50 95 C45.5 62 38 54.5 5 50 C38 45.5 45.5 38 50 5 Z"/></svg>
+      Ben Walther
+    </div>
+  </div>
+  <p class="lead">Your real values hide in moments, not in nice words. Work down the page: mine the evidence, name what's underneath, cut to five, and turn your top value into a question you can use.</p>
+
+  <div class="pass">
+    <div class="passHead"><span class="passNum">01</span><span class="passTitle">Mine your evidence, not your ideals</span></div>
+    <p class="passNote">Three moments from the last year when you felt most alive, and three when you felt most resentful or drained. Fragments are fine. Don't interpret yet.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="colLabel">✦ Most alive</div>
+        <div class="lineRow"><span class="rowTag">1</span><span class="line"></span></div>
+        <div class="lineRow"><span class="rowTag">2</span><span class="line"></span></div>
+        <div class="lineRow"><span class="rowTag">3</span><span class="line"></span></div>
+      </div>
+      <div class="col">
+        <div class="colLabel">✦ Most resentful</div>
+        <div class="lineRow"><span class="rowTag">1</span><span class="line"></span></div>
+        <div class="lineRow"><span class="rowTag">2</span><span class="line"></span></div>
+        <div class="lineRow"><span class="rowTag">3</span><span class="line"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pass">
+    <div class="passHead"><span class="passNum">02</span><span class="passTitle">Name the value under each moment</span></div>
+    <p class="passNote">For each alive moment: what was being honored? For each resentful one: what was being violated? Resentment fires when something you value is being stepped on.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="lineRow"><span class="rowTag">1 →</span><span class="lineSm"></span></div>
+        <div class="lineRow"><span class="rowTag">2 →</span><span class="lineSm"></span></div>
+        <div class="lineRow"><span class="rowTag">3 →</span><span class="lineSm"></span></div>
+      </div>
+      <div class="col">
+        <div class="lineRow"><span class="rowTag">1 →</span><span class="lineSm"></span></div>
+        <div class="lineRow"><span class="rowTag">2 →</span><span class="lineSm"></span></div>
+        <div class="lineRow"><span class="rowTag">3 →</span><span class="lineSm"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pass">
+    <div class="passHead"><span class="passNum">03</span><span class="passTitle">Cut the list to five</span></div>
+    <div class="test">The test for each: <b>&ldquo;Have I sacrificed something real to protect this?&rdquo;</b> If not, it's an aspiration, not a value. Aspirations are fine, but they don't belong on the compass.</div>
+    <div class="cols">
+      <div class="col">
+        <div class="fiveRow"><span class="fiveNum">1</span><span class="line"></span></div>
+        <div class="fiveRow"><span class="fiveNum">2</span><span class="line"></span></div>
+        <div class="fiveRow"><span class="fiveNum">3</span><span class="line"></span></div>
+      </div>
+      <div class="col">
+        <div class="fiveRow"><span class="fiveNum">4</span><span class="line"></span></div>
+        <div class="fiveRow"><span class="fiveNum">5</span><span class="line"></span></div>
+        <div class="fiveRow" style="visibility:hidden"><span class="fiveNum">·</span><span class="line"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pass">
+    <div class="passHead"><span class="passNum">04</span><span class="passTitle">Write your decision filter</span></div>
+    <p class="passNote">Circle your top value above, then turn it into a single question you can ask in the moment. When you're stuck, you don't need more options — you need a sharper filter.</p>
+    <div class="filterBox">
+      <div class="filterTemplate">Template: &ldquo;Does this protect my ________________, or trade it away?&rdquo;</div>
+      <div class="lineRow"><span class="rowTag">Mine:</span><span class="line" style="height:18px"></span></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span><span class="spark">✦</span> Keep this page where you'll see it before the next hard decision — not after.</span>
+    <span>Ben Walther · Life &amp; Personal Growth Coaching</span>
+  </div>
+</body>
+</html>

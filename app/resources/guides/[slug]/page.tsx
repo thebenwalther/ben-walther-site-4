@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/site/PageHeader";
-import { EmailGate } from "@/components/site/EmailGate";
+import { DownloadCard } from "@/components/site/DownloadCard";
 import { getGuide, guideSlugs } from "@/lib/data/guides";
 import styles from "./guide.module.css";
 
@@ -93,13 +93,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
       <section className={styles.gateWrap}>
         <div className={`bw-container ${styles.gateInner}`}>
-          <EmailGate
+          <DownloadCard
             kicker="Free download"
             title={guide.download.title}
             lead={guide.download.lead}
             cta={guide.download.cta}
-            successTitle="On its way."
-            successBody="Check your inbox for the printable PDF. While you wait, the Clarity Assessment will tell you which guide to use next."
+            file={guide.download.file}
           />
         </div>
       </section>

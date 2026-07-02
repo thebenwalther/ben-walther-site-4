@@ -9,6 +9,8 @@ export interface ButtonProps {
   size?: "sm" | "md" | "lg";
   /** Render as a link when set. */
   href?: string;
+  /** With href: render a plain anchor that downloads the file instead of routing. */
+  download?: boolean;
   iconRight?: React.ReactNode;
   iconLeft?: React.ReactNode;
   fullWidth?: boolean;
@@ -44,6 +46,7 @@ export function Button({
   variant = "accent",
   size = "md",
   href,
+  download = false,
   iconRight,
   iconLeft,
   fullWidth = false,
@@ -73,6 +76,13 @@ export function Button({
   );
 
   if (href && !disabled) {
+    if (download) {
+      return (
+        <a href={href} download className={cls} style={style} onClick={onClick}>
+          {inner}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={cls} style={style} onClick={onClick}>
         {inner}
