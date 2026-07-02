@@ -93,6 +93,29 @@ is kept outside this repo; the brand tokens it defined are ported into
   the spark mark in React (nav + footer); `public/logo/mark.svg` mirrors it for
   the favicon and non-React contexts.
 
+## When the email provider lands
+
+The plan of record once a list provider (ConvertKit, Mailchimp, etc.) is
+chosen. `EmailGate` already accepts an `onSubmitEmail(email)` prop — wire
+each capture point to the provider through it (typically via a small
+API route or the provider's form endpoint):
+
+1. **Guide PDFs → gated downloads.** Swap `DownloadCard` back to
+   `EmailGate` on `app/resources/guides/[slug]/page.tsx`, using the
+   gate-the-click pattern: require the email, then *both* trigger the
+   file download immediately (`lib/data/guides.ts` carries each
+   `download.file` path) and send it by email. Nobody waits on their
+   inbox for a file we can hand them instantly.
+2. **Clarity Assessment results email** — the capture on the result page
+   (`components/assessment/AssessmentResult.tsx`) sends the breakdown +
+   per-dimension exercises. Highest-intent capture on the site.
+3. **The 5-Day Reset** — write the five emails (day-by-day copy already
+   drafted in git history: see commit `7e8378c`) and connect the signup
+   on `/resources/reset-email-course`. Until then this page is the one
+   remaining capture that over-promises.
+4. **Footer "Newsletter" link** — currently points at the Reset signup;
+   revisit once a real newsletter exists.
+
 ### Notes & follow-ups
 
 - **Placeholder content** — coaching prices, testimonials, podcast episodes,
