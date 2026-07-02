@@ -23,33 +23,42 @@
   }
   .glow2 {
     position: absolute; inset: 0;
-    background: radial-gradient(40% 70% at 8% 115%, rgba(198,166,100,.14), transparent 60%);
+    background: radial-gradient(40% 70% at 8% 115%, rgba(198,166,100,.10), transparent 60%);
   }
+  /* oversized signature spark, barely-there, for bottom-right balance
+     (a zone the avatar never reaches) */
+  .watermark {
+    position: absolute;
+    right: 60px;
+    bottom: -70px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.09;
+  }
+  /* All content lives in the top band — X's avatar circle overlaps the
+     bottom-left up to roughly two-thirds of the banner height. */
   .content {
     position: relative;
     z-index: 2;
-    height: 100%;
-    padding: 56px 90px 52px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 46px 90px 0;
   }
-  .brandRow { display: flex; align-items: center; gap: 14px; }
-  .wordmark { font-weight: 800; font-size: 30px; letter-spacing: -0.015em; }
+  .brandRow { display: flex; align-items: center; gap: 14px; margin-bottom: 30px; }
+  .wordmark { font-weight: 800; font-size: 28px; letter-spacing: -0.015em; }
   .kicker {
-    margin-left: 22px;
-    padding-left: 22px;
+    margin-left: 20px;
+    padding-left: 20px;
     border-left: 1px solid rgba(243,238,228,.25);
-    font-size: 15px; font-weight: 700;
+    font-size: 14px; font-weight: 700;
     letter-spacing: .18em; text-transform: uppercase;
     color: #DCC592;
   }
   .headline {
     font-weight: 800;
-    font-size: 92px;
-    line-height: 1.0;
+    font-size: 80px;
+    line-height: 1.02;
     letter-spacing: -0.035em;
-    max-width: 1160px;
+    max-width: 1180px;
+    margin-bottom: 24px;
   }
   .headline .em {
     font-family: 'Instrument Serif', serif;
@@ -58,40 +67,24 @@
     color: #C6A664;
     letter-spacing: -0.01em;
   }
-  .bottomRow {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* keep bottom-left clear of the avatar overlap */
-    gap: 26px;
-  }
   .proof {
     font-size: 19px;
     font-weight: 500;
-    color: rgba(243,238,228,.75);
+    color: rgba(243,238,228,.72);
   }
   .proof .spark { color: #C6A664; margin-right: 10px; }
-  .pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #C6A664;
-    color: #14291F;
-    font-weight: 800;
-    font-size: 21px;
-    padding: 17px 32px;
-    border-radius: 999px;
-    box-shadow: 0 12px 26px -10px rgba(198,166,100,.65);
-    white-space: nowrap;
-  }
 </style>
 </head>
 <body>
   <div class="banner">
     <div class="glow1"></div>
     <div class="glow2"></div>
+    <svg class="watermark" viewBox="0 0 100 100" aria-hidden="true">
+      <path fill="#C6A664" d="M50 5 C54.5 38 62 45.5 95 50 C62 54.5 54.5 62 50 95 C45.5 62 38 54.5 5 50 C38 45.5 45.5 38 50 5 Z"/>
+    </svg>
     <div class="content">
       <div class="brandRow">
-        <svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
           <path fill="#C6A664" d="M50 5 C54.5 38 62 45.5 95 50 C62 54.5 54.5 62 50 95 C45.5 62 38 54.5 5 50 C38 45.5 45.5 38 50 5 Z"/>
         </svg>
         <span class="wordmark">Ben Walther</span>
@@ -102,10 +95,7 @@
         You weren&rsquo;t created to settle. <span class="em">Let&rsquo;s prove it.</span>
       </div>
 
-      <div class="bottomRow">
-        <span class="proof"><span class="spark">✦</span>From classrooms and courts to your corner.</span>
-        <span class="pill">Take the free Clarity Assessment →</span>
-      </div>
+      <div class="proof"><span class="spark">✦</span>From classrooms and courts to your corner.</div>
     </div>
   </div>
 </body>
