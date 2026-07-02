@@ -1,5 +1,11 @@
 export type Dimension = "clarity" | "momentum" | "trust";
 
+/** Score-aware read of one dimension: what it means, and one small move. */
+export interface InsightTier {
+  insight: string;
+  action: string;
+}
+
 export interface DimensionMeta {
   key: Dimension;
   label: string;
@@ -7,6 +13,8 @@ export interface DimensionMeta {
   blurb: string;
   /** Maps to the Becoming Framework stage this dimension feeds. */
   stage: string;
+  /** Personalized read per score tier: low < 50, mid 50–74, high ≥ 75. */
+  tiers: { low: InsightTier; mid: InsightTier; high: InsightTier };
   /** Resource recommended when this is the weakest dimension. */
   recommend: {
     title: string;
@@ -29,6 +37,22 @@ export const dimensions: Record<Dimension, DimensionMeta> = {
     label: "Clarity",
     blurb: "How clearly you can name what you actually want — underneath the shoulds.",
     stage: "Get Clear",
+    tiers: {
+      low: {
+        insight:
+          "Right now the loudest voice in your head probably isn't yours. That vague dissatisfaction you can't name is usually a buried want, not a missing one.",
+        action: "Tonight, finish this sentence in writing: \"If nobody would judge me, I would…\" Don't solve it. Just say it.",
+      },
+      mid: {
+        insight:
+          "You get real glimpses of what you want; they just haven't hardened into something you'd say out loud yet.",
+        action: "Say the want out loud to one person this week. Naming it in front of someone makes it real.",
+      },
+      high: {
+        insight: "You know what you want. Clarity isn't your gap, so don't let more planning become a hiding place.",
+        action: "Skip the next round of clarifying. Put a date on the next move instead.",
+      },
+    },
     recommend: {
       title: "The Values Compass",
       href: "/resources/guides/values-compass",
@@ -40,6 +64,21 @@ export const dimensions: Record<Dimension, DimensionMeta> = {
     label: "Momentum",
     blurb: "Whether you're actually moving, or circling the same thing on repeat.",
     stage: "Get Unstuck → Get Moving",
+    tiers: {
+      low: {
+        insight:
+          "You've been circling — not because you're lazy, but because the loop is protecting you from a risk it never names.",
+        action: "Pick the two-minute version of the thing you've been avoiding and do it before tomorrow night.",
+      },
+      mid: {
+        insight: "You move, then stall, then move again. That's not a willpower problem; it's a missing cadence.",
+        action: "Set one specific, repeatable weekly step. Make it small enough to survive a bad week.",
+      },
+      high: {
+        insight: "You're moving. The risk at this level is drift: motion that quietly stops pointing at what matters.",
+        action: "Once this week, ask: is this aimed at what I actually want, or just at what's next?",
+      },
+    },
     recommend: {
       title: "The Stuck-Loop Map",
       href: "/resources/guides/stuck-loop-map",
@@ -51,6 +90,22 @@ export const dimensions: Record<Dimension, DimensionMeta> = {
     label: "Self-trust",
     blurb: "How much you trust yourself to follow through and recover from setbacks.",
     stage: "Get Moving",
+    tiers: {
+      low: {
+        insight:
+          "Somewhere along the way you stopped believing your own word to yourself. That isn't permanent; it's just untrained.",
+        action: "Make one absurdly small promise to yourself tonight and keep it. Repeat tomorrow.",
+      },
+      mid: {
+        insight:
+          "You follow through when the stakes are visible. The gap shows up in the quiet promises nobody's watching.",
+        action: "Tell one person about your next commitment. Borrowed accountability builds the internal kind.",
+      },
+      high: {
+        insight: "You keep your word to yourself — the strongest predictor of change there is. Put it to work.",
+        action: "Raise the stakes: commit to the bigger version of your next step, not the safe one.",
+      },
+    },
     recommend: {
       title: "The 5-Day Reset",
       href: "/resources/reset-email-course",
@@ -126,15 +181,27 @@ export function scoreAssessment(answers: Record<string, number>): AssessmentResu
   return { scores, overall, weakest, band: bandFor(overall) };
 }
 
+/** Map a 0–100 dimension score to its insight-tier key. */
+export function tierFor(percent: number): "low" | "mid" | "high" {
+  return percent >= 75 ? "high" : percent >= 50 ? "mid" : "low";
+}
+
 function bandFor(overall: number): { label: string; summary: string } {
-  if (overall >= 75) {
+  if (overall >= 80) {
     return {
       label: "You're in motion",
       summary:
         "You've got real momentum and a strong sense of direction. The work now isn't a reset — it's leverage. The right structure could turn a good trajectory into a great one.",
     };
   }
-  if (overall >= 50) {
+  if (overall >= 60) {
+    return {
+      label: "You're closer than it feels",
+      summary:
+        "Most of the machinery is working. One dimension is quietly taxing the other two, and that's where the leverage is. Close that gap and the rest compounds.",
+    };
+  }
+  if (overall >= 40) {
     return {
       label: "You're on the edge of a shift",
       summary:

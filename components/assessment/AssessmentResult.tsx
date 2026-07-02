@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Button } from "@/components/ui";
 import { BookingCta } from "@/components/site/BookingCta";
-import { dimensions, type AssessmentResult as Result } from "@/lib/data/assessment";
+import { EmailGate } from "@/components/site/EmailGate";
+import { dimensions, tierFor, type AssessmentResult as Result } from "@/lib/data/assessment";
 import styles from "./AssessmentResult.module.css";
 
 export function AssessmentResultView({ result, onRestart }: { result: Result; onRestart: () => void }) {
@@ -25,6 +26,7 @@ export function AssessmentResultView({ result, onRestart }: { result: Result; on
         {result.scores.map((s) => {
           const meta = dimensions[s.dimension];
           const weak = s.dimension === result.weakest;
+          const tier = meta.tiers[tierFor(s.percent)];
           return (
             <div key={s.dimension} className={styles.bar}>
               <div className={styles.barHead}>
@@ -37,7 +39,11 @@ export function AssessmentResultView({ result, onRestart }: { result: Result; on
               <div className={styles.barTrack}>
                 <div className={styles.barFill} style={{ width: `${s.percent}%` }} />
               </div>
-              <p className={styles.barBlurb}>{meta.blurb}</p>
+              <p className={styles.insight}>{tier.insight}</p>
+              <div className={styles.action}>
+                <span className={styles.actionLabel}>Try this</span>
+                <span className={styles.actionText}>{tier.action}</span>
+              </div>
             </div>
           );
         })}
@@ -55,6 +61,18 @@ export function AssessmentResultView({ result, onRestart }: { result: Result; on
             See all resources
           </Button>
         </div>
+      </div>
+
+      <div className={styles.emailBlock}>
+        <EmailGate
+          kicker="Optional — your result stays free either way"
+          title="Want this in your inbox?"
+          lead="I'll send you this breakdown plus one short exercise for each of your three scores, so it doesn't vanish into a closed tab."
+          cta="Email me my results"
+          successTitle="Sent."
+          successBody="Your breakdown is on its way. When you're ready for the next step, the recommendation above is where I'd start."
+          note="Just your results and the exercises. No spam, unsubscribe anytime."
+        />
       </div>
 
       <div className={styles.secondary}>
