@@ -31,8 +31,8 @@ export const resources: Resource[] = [
     icon: "✦",
     title: "The Becoming Framework",
     blurb:
-      "The simple three-stage model behind every program I run: Get Clear, Get Unstuck, Get Moving. The full breakdown of each stage, what tends to go wrong, and a practice you can run on yourself this week.",
-    meta: "Deep-dive guide · ~12 min read",
+      "The simple three-stage model behind every program I run: Get Clear, Get Unstuck, Get Moving. The full breakdown of each stage, where it goes wrong, and a practice you can run on yourself this week.",
+    meta: "Deep-dive · printable one-pager · free",
   },
   {
     slug: "reset-email-course",

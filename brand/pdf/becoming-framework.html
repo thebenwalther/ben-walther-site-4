@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  @page { size: Letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 8.5in; height: 11in;
+    padding: 0.62in 0.7in 0.5in;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: #23231E;
+    background: #FFFFFF;
+    display: flex; flex-direction: column;
+  }
+  .head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
+  .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 13px; color: #1C3A2E; }
+  .kind { font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #C6A664; padding-top: 3px; }
+  h1 { font-weight: 800; font-size: 30px; letter-spacing: -0.025em; color: #1C3A2E; line-height: 1.02; }
+  h1 .em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: #C6A664; }
+  .lead { font-size: 11.5px; line-height: 1.5; color: #6E6A5E; margin: 8px 0 14px; max-width: 6.6in; }
+
+  .model { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 16px; }
+  .node { display: flex; align-items: center; gap: 9px; }
+  .circle {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: #F6EEDB; border: 1px solid #C6A664;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Instrument Serif', serif; font-style: italic; font-size: 15px; color: #C6A664;
+  }
+  .nodeName { font-weight: 800; font-size: 13.5px; color: #1C3A2E; letter-spacing: -0.01em; }
+  .arrow { color: #C6A664; font-size: 14px; }
+
+  .stage { background: #FBF8F2; border: 1px solid #E8E2D4; border-radius: 12px; padding: 13px 16px; margin-bottom: 11px; }
+  .stageHead { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+  .stageNum { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 19px; color: #C6A664; }
+  .stageTitle { font-weight: 800; font-size: 15px; color: #1C3A2E; }
+  .stageSummary { font-size: 10.5px; line-height: 1.5; color: #23231E; margin-bottom: 8px; }
+  .cols { display: flex; gap: 14px; }
+  .col { flex: 1; }
+  .colLabel { font-size: 8.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #C6A664; margin-bottom: 4px; }
+  .signs { list-style: none; }
+  .signs li { font-size: 9.5px; line-height: 1.5; color: #23231E; display: flex; gap: 6px; margin-bottom: 2px; }
+  .signs .s { color: #C6A664; }
+  .small { font-size: 9.5px; line-height: 1.5; color: #6E6A5E; }
+  .practiceBox { background: #F3EEE4; border-radius: 8px; padding: 7px 10px; font-size: 9.5px; line-height: 1.5; color: #23231E; margin-top: 8px; }
+  .practiceBox b { color: #1C3A2E; }
+
+  .order { background: #1C3A2E; color: #F3EEE4; border-radius: 12px; padding: 10px 14px; font-size: 10px; line-height: 1.55; margin-top: 2px; }
+  .order b { color: #DCC592; }
+
+  .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #E8E2D4; padding-top: 8px; font-size: 8.5px; color: #A5A092; }
+  .foot .spark { color: #C6A664; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="kind">The model · one page</div>
+      <h1>The Becoming <span class="em">Framework.</span></h1>
+    </div>
+    <div class="brand">
+      <svg width="16" height="16" viewBox="0 0 100 100"><path fill="#C6A664" d="M50 5 C54.5 38 62 45.5 95 50 C62 54.5 54.5 62 50 95 C45.5 62 38 54.5 5 50 C38 45.5 45.5 38 50 5 Z"/></svg>
+      Ben Walther
+    </div>
+  </div>
+  <p class="lead">Three stages, in order. Trying to get moving before you're clear is why most change doesn't stick.</p>
+
+  <div class="model">
+    <div class="node"><span class="circle">01</span><span class="nodeName">Get clear</span></div>
+    <span class="arrow">→</span>
+    <div class="node"><span class="circle">02</span><span class="nodeName">Get unstuck</span></div>
+    <span class="arrow">→</span>
+    <div class="node"><span class="circle">03</span><span class="nodeName">Get moving</span></div>
+  </div>
+
+  <div class="stage">
+    <div class="stageHead"><span class="stageNum">01</span><span class="stageTitle">Get clear</span></div>
+    <p class="stageSummary">Cut through the noise and name what actually matters to you — underneath the shoulds.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="colLabel">You're in this stage if</div>
+        <ul class="signs">
+          <li><span class="s">✦</span>You're busy, but you couldn't say what it's all for</li>
+          <li><span class="s">✦</span>Your goals sound suspiciously like someone else's</li>
+          <li><span class="s">✦</span>You feel a vague dissatisfaction you can't quite name</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="colLabel">Where it goes wrong</div>
+        <p class="small">Endless reflection. Clarity is a starting line, not a destination. At some point you stop journaling about the fog and name one true thing.</p>
+      </div>
+    </div>
+    <div class="practiceBox"><b>Try it this week:</b> map the gap between the life you're performing and the one you actually want, then name one true thing you've been avoiding saying out loud.</div>
+  </div>
+
+  <div class="stage">
+    <div class="stageHead"><span class="stageNum">02</span><span class="stageTitle">Get unstuck</span></div>
+    <p class="stageSummary">Find the patterns keeping you in place and build the leverage to break them.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="colLabel">You're in this stage if</div>
+        <ul class="signs">
+          <li><span class="s">✦</span>You know what you want and still don't move</li>
+          <li><span class="s">✦</span>You keep re-planning the same first step</li>
+          <li><span class="s">✦</span>Every &ldquo;almost&rdquo; has the same quiet excuse underneath</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="colLabel">Where it goes wrong</div>
+        <p class="small">Mistaking motion for progress: new plans, new research, new tools, same loop. The loop doesn't need more input. It needs to be seen.</p>
+      </div>
+    </div>
+    <div class="practiceBox"><b>Try it this week:</b> identify your specific stuck-pattern and design the smallest possible action that breaks it this week.</div>
+  </div>
+
+  <div class="stage">
+    <div class="stageHead"><span class="stageNum">03</span><span class="stageTitle">Get moving</span></div>
+    <p class="stageSummary">Weekly accountability and doable steps that compound into a different life.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="colLabel">You're in this stage if</div>
+        <ul class="signs">
+          <li><span class="s">✦</span>You start strong and fade by week three</li>
+          <li><span class="s">✦</span>You negotiate with your own commitments</li>
+          <li><span class="s">✦</span>One setback can cost you a month</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="colLabel">Where it goes wrong</div>
+        <p class="small">Betting on intensity. Willpower is a sprinter; cadence is a marathoner. If the plan only works on your best weeks, it isn't a plan.</p>
+      </div>
+    </div>
+    <div class="practiceBox"><b>Try it this week:</b> set a weekly cadence of small, specific commitments, plus one person who'll know whether you kept them.</div>
+  </div>
+
+  <div class="order"><b>The order is the method.</b> Grinding on willpower (stage three) when you were never clear (stage one) is why change keeps failing — and why it isn't your fault. Get the sequence right and change stops feeling like force. It starts feeling like gravity.</div>
+
+  <div class="foot">
+    <span><span class="spark">✦</span> Find your stage in five minutes: the free Clarity Assessment at the resources page.</span>
+    <span>Ben Walther · Life &amp; Personal Growth Coaching</span>
+  </div>
+</body>
+</html>

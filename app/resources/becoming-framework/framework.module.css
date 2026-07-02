@@ -12,6 +12,51 @@
   color: var(--text-body);
   margin: 0 0 20px;
 }
+/* the model, at a glance */
+.model {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto 72px;
+}
+.modelStage {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.modelNode {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--accent) 16%, var(--bw-white));
+  border: 1.5px solid color-mix(in oklab, var(--accent) 45%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.modelNum {
+  font-size: 30px;
+  color: var(--accent);
+  line-height: 1;
+}
+.modelName {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-black);
+  font-size: 22px;
+  letter-spacing: -0.015em;
+  color: var(--text-strong);
+  margin-left: -8px;
+}
+.modelArrow {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  color: var(--accent);
+}
+
 .stage {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -66,6 +111,54 @@
   color: var(--text-muted);
   margin: 0 0 28px;
 }
+.signs {
+  margin: 0 0 22px;
+}
+.signsLabel {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.signsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.signsItem {
+  display: flex;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  color: var(--text-body);
+}
+.signsMark {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.pitfall {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 26px;
+}
+.pitfallLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
 .practice {
   background: var(--surface-raised);
   border-radius: var(--radius-lg);
@@ -86,6 +179,27 @@
   line-height: 1.55;
   color: var(--text-body);
   margin: 0;
+}
+.toolLink {
+  display: inline-block;
+  margin-top: 22px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text-body);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 3px;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+.toolLink:hover {
+  opacity: 0.75;
+}
+.toolLink b {
+  color: var(--text-strong);
+}
+.downloadWrap {
+  max-width: 1000px;
+  margin: 64px auto 16px;
 }
 .cta {
   background: var(--surface-dark);
@@ -123,6 +237,25 @@
 }
 
 @media (max-width: 980px) {
+  .model {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 56px;
+  }
+  .modelStage {
+    gap: 16px;
+  }
+  .modelNode {
+    width: 56px;
+    height: 56px;
+  }
+  .modelNum {
+    font-size: 24px;
+  }
+  .modelArrow {
+    display: none;
+  }
   .stage {
     grid-template-columns: 1fr;
     gap: 24px;

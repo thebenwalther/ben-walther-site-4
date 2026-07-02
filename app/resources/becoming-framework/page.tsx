@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/site/PageHeader";
+import { DownloadCard } from "@/components/site/DownloadCard";
 import { Kicker, Button } from "@/components/ui";
 import { framework } from "@/lib/data/framework";
 import styles from "./framework.module.css";
@@ -7,7 +9,7 @@ import styles from "./framework.module.css";
 export const metadata: Metadata = {
   title: "The Becoming Framework — Ben Walther",
   description:
-    "The simple three-stage model behind every program: Get Clear, Get Unstuck, Get Moving. A full breakdown of each stage and a practice you can run on yourself this week.",
+    "The simple three-stage model behind every program: Get Clear, Get Unstuck, Get Moving. A full breakdown of each stage, where it goes wrong, and a practice you can run on yourself this week.",
 };
 
 export default function BecomingFrameworkPage() {
@@ -39,6 +41,23 @@ export default function BecomingFrameworkPage() {
             </p>
           </div>
 
+          {/* The model, at a glance */}
+          <div className={styles.model} aria-label="The three stages in order">
+            {framework.map((s, i) => (
+              <div key={s.n} className={styles.modelStage}>
+                <div className={styles.modelNode}>
+                  <span className={`bw-em ${styles.modelNum}`}>{s.n}</span>
+                </div>
+                <div className={styles.modelName}>{s.title}</div>
+                {i < framework.length - 1 ? (
+                  <div className={styles.modelArrow} aria-hidden="true">
+                    →
+                  </div>
+                ) : null}
+              </div>
+            ))}
+          </div>
+
           {framework.map((s) => (
             <div key={s.n} className={styles.stage}>
               <div className={styles.stageLeft}>
@@ -49,13 +68,47 @@ export default function BecomingFrameworkPage() {
               <div>
                 <p className={styles.stageSummary}>{s.summary}</p>
                 <p className={styles.stageDetail}>{s.detail}</p>
+
+                <div className={styles.signs}>
+                  <div className={styles.signsLabel}>You&apos;re in this stage if</div>
+                  <ul className={styles.signsList}>
+                    {s.signs.map((sign, i) => (
+                      <li key={i} className={styles.signsItem}>
+                        <span className={styles.signsMark} aria-hidden="true">
+                          ✦
+                        </span>
+                        {sign}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <p className={styles.pitfall}>
+                  <strong className={styles.pitfallLabel}>Where it goes wrong</strong>
+                  {s.pitfall}
+                </p>
+
                 <div className={styles.practice}>
                   <div className={styles.practiceLabel}>Try it this week</div>
                   <p className={styles.practiceText}>{s.practice}</p>
                 </div>
+
+                <Link href={s.tool.href} className={styles.toolLink}>
+                  The free tool for this stage: <b>{s.tool.title}</b> →
+                </Link>
               </div>
             </div>
           ))}
+
+          <div className={styles.downloadWrap}>
+            <DownloadCard
+              kicker="Keep the model"
+              title="Download the one-page framework"
+              lead="All three stages on a single printable page: the signs you're in each, where it goes wrong, and a practice for the week."
+              cta="Download the one-pager"
+              file="/downloads/becoming-framework.pdf"
+            />
+          </div>
         </div>
       </section>
 
